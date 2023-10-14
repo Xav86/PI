@@ -1,0 +1,60 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçario */
+#title
+{
+    text-align: center;
+}
+
+/* Login */
+#container
+{ 
+    width: 100%;
+    max-width: 500px;
+    /* border: 2px solid red; */
+    margin: 50px auto 0;
+    padding: 20px;
+}
+
+#logar
+{
+    width: 100%;
+    max-width: 588px;
+    background-color: lightgray;
+    border-radius: 20px;
+
+    padding: 10px 20px;
+}
+
+/* Campos de preenchimento */
+#box
+{
+    padding: 0 10px;
+    /* border: 1px solid red; */
+}
+
+/* Botão */
+#entrar
+{
+    margin-top: 30px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.d-grid
+{
+    padding: 0 10px;
+}
+
+/* Texto de Aviso */
+.aviso
+{
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;   
+}
