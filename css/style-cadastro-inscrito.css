@@ -16,8 +16,38 @@
 
 #box
 {
-    padding: 0 10px;
+    padding: 10px;
     /* border: 1px solid red; */
     background-color: lightgray;
     border-radius: 20px;
+}
+
+/* Titulo */
+#title
+{
+    text-align: center;
+}
+
+/* Campos */
+.row
+{
+    padding: 10px;
+}
+
+.mb-3
+{
+    padding: 10px;
+}
+
+/* Botão */
+.d-grid
+{
+    padding: 10px;
+}
+
+/* aviso */
+.aviso
+{
+    text-align: center;
+    padding: 10px;
 }
