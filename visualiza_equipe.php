@@ -85,7 +85,7 @@
 
                         $res = mysqli_query($id, $sql);
                         while ($linha = mysqli_fetch_array($res)) { ?>
-                            <tr>
+                            <tr> <!-- Necessário corrigir a ordem da lista -->
                                 <td>
                                     <?php echo $linha['id_equipe'];?>
                                 </td>
