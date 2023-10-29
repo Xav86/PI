@@ -1,11 +1,3 @@
-<?php
-require 'code/connection.php';
-
-$stmt = $pdo->query('SELECT * FROM equipes ORDER BY pontuacao_total DESC');
- 
-$equipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -80,31 +72,35 @@ $equipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Imagem</th>
                             <th scope="col">Nome</th>
-                            <th scope="col">Pontos</th>
-                            <th scope="col">Editar</th>
-                            <th scope="col">Excluir</th>
+                            <th scope="col" style="text-align:end;">Pontos</th>
+                            <th scope="col" style="text-align:end;">Editar</th>
+                            <th scope="col" style="text-align:end;">Excluir</th>
                         </tr>
                     </thead>
-                    <?php foreach ($equipes as $key => $equipe): ?>
-                        <tbody>
-                        <tr>
-                            <th scope="row">
-                            <?php echo $key + 1; ?>
-                            </th>
-                                <td><img src="assets\image\cedup_logo.webp" alt="teste" style="width: 34px;"></td>
-                            <td>
-                            <?php echo $equipe['nome']; ?>
-                            </td>
-                            <td>
-                            <?php echo $equipe['pontuacao_total']; ?>
-                            </td>
-                            <td><a href="code/edita-equipe.php">Editar</a></td>
-                            <td>Excluir</td>
-                        </tr>
-                        </tbody>
-                     <?php endforeach; ?>
+                    <?php
+                        require 'code/connection.php';
+
+                        $sql = ('SELECT * FROM equipes ORDER BY pontuacao_total DESC');
+
+                        $res = mysqli_query($id, $sql);
+                        while ($linha = mysqli_fetch_array($res)) { ?>
+                            <tr>
+                                <td>
+                                    <?php echo $linha['id_equipe'];?>
+                                </td>
+                                <td>
+                                    <?php echo $linha['nome'];?>
+                                </td>
+                                <td style="text-align:end;">
+                                    <?php echo $linha['pontuacao_total'];?>
+                                </td>
+                                <td style="text-align:end;"><a href="#">nada ainda</a></td>
+                                <td style="text-align:end;"><a href="#">nada ainda</a></td>
+                
+                            </tr>
+                
+                        <?php } ?>
                 </table>
                 
             </div>

@@ -11,3 +11,5 @@ if (!($con = mysqli_select_db($id, $dbname))) {
     exit;
 
 }
+
+?>
