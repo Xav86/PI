@@ -2,7 +2,7 @@
 require 'connection.php';
 
 $stmt = $pdo->query('SELECT * FROM equipes ORDER BY pontuacao_total DESC');
-
+ 
 $equipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 

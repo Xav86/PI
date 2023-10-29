@@ -1,3 +1,11 @@
+<?php
+require 'code/connection.php';
+
+$stmt = $pdo->query('SELECT * FROM equipes ORDER BY pontuacao_total DESC');
+ 
+$equipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,8 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/style-visualiza-capitao.css">
-    <title>Visualiza Capitão</title>
+    <link rel="stylesheet" href="css/style-visualiza-equipe.css">
+    <title>Visualiza Equipe</title>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
  
@@ -40,8 +48,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="cadastro_equipe.html">Cadastrar Equipe</a></li>
-                            <li><a class="dropdown-item" href="#">Editar Equipe</a></li>
-                            <li><a class="dropdown-item" href="#">Excluir Equipe</a></li>
+                            <li><a class="dropdown-item" href="visualiza_equipe.php">Visualizar Equipe</a></li>
                         </ul>
                     </li>
 
@@ -76,27 +83,28 @@
                             <th scope="col">Imagem</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Pontos</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Excluir</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <?php foreach ($equipes as $key => $equipe): ?>
+                        <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td><img src="assets/image/cedup_logo.webp" alt="teste" style="width: 34px;"></td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th scope="row">
+                            <?php echo $key + 1; ?>
+                            </th>
+                                <td><img src="assets\image\cedup_logo.webp" alt="teste" style="width: 34px;"></td>
+                            <td>
+                            <?php echo $equipe['nome']; ?>
+                            </td>
+                            <td>
+                            <?php echo $equipe['pontuacao_total']; ?>
+                            </td>
+                            <td><a href="code/edita-equipe.php">Editar</a></td>
+                            <td>Excluir</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
+                        </tbody>
+                     <?php endforeach; ?>
                 </table>
                 
             </div>
