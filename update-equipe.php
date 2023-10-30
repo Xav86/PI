@@ -13,6 +13,6 @@ if ($res)
     echo "Alterado com sucesso";
 
 } else {
-    echo "Erro ao cadastrar".mysqli_error($id);
+    echo "Erro ao alterar".mysqli_error($id);
 
 }
