@@ -85,7 +85,6 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                     </div>
 
                 </div>
-                <form action="code/cadastra-equipe.php" method="post">
                     <!-- imagem   
                     <div id="image">
                         <label for="image-upload" class="custom-file-upload">
@@ -110,7 +109,6 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                         </div>                
                     </form>
                     
-                </form>
             </div>
         </div>
             

@@ -65,7 +65,6 @@
     </nav>
 
     <main>
-        <div id="alinhamento">
             <div id="tabela">
 
                 <table class="table">
@@ -103,10 +102,9 @@
                         <?php } ?>
                 </table>
                 
-            </div>
-        </div>       
-            
+            </div> 
+
     </main>
-        
+
 </body>
 </html>
