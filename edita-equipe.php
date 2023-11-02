@@ -85,15 +85,6 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                     </div>
 
                 </div>
-                    <!-- imagem   
-                    <div id="image">
-                        <label for="image-upload" class="custom-file-upload">
-                            <img class="foto" src="assets/image/inserir-imagem.png" alt="Inserir Imagem">
-                        </label>
-                        <input type="file" id="image-upload" style="display: none;" name="imagem">
-                        <p id="image-status">Clique na imagem para enviar a imagem</p>
-                    </div> -->
-
                     <!-- Campos -->
                     <form action="update-equipe.php" method="post">
 
@@ -107,7 +98,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                         <div class="d-grid gap-2">
                             <button class="btn btn-primary btn-lg" type="submit">Button</button>
                         </div> 
-                                     
+
                     </form>
                     
             </div>
@@ -115,18 +106,6 @@ while ($linha = mysqli_fetch_array($res)) { ?>
             
 
     </main>
-    <!-- <script>
-        const imageUpload = document.getElementById('image-upload');
-        const imageStatus = document.getElementById('image-status');
-    
-        imageUpload.addEventListener('change', function () {
-            if (imageUpload.files.length > 0) {
-                imageStatus.textContent = 'Imagem Adicionada';
-            } else {
-                imageStatus.textContent = 'Clique na imagem para enviar a imagem';
-            }
-        });
-    </script> -->
 
 </body>
 </html>
