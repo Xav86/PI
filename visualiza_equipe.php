@@ -85,7 +85,9 @@
                         $res = mysqli_query($id, $sql);
                         $posicao = 0;
                         while ($linha = mysqli_fetch_array($res)) { 
-                            $posicao = $posicao+1;?>
+                            if ($linha['statu'] == 'ativo') {
+                            $posicao = $posicao+1;
+                            ?>
                         
                             <tr>
                                 <td>
@@ -98,11 +100,11 @@
                                     <?php echo $linha['pontuacao_total'];?>
                                 </td>
                                 <td style="text-align:end;"><a class="btn btn-warning" href="edita-equipe.php?id_equipe=<?php echo $linha['id_equipe']; ?>">Alterar</a></td>
-                                <td style="text-align:end;"><a href="#">Excluir</a></td>
+                                <td style="text-align:end;"><a class="btn btn-danger" href="code/deleta-equipe.php?id_equipe=<?php echo $linha['id_equipe']; ?>">Excluir</a></td>
                 
                             </tr>
                 
-                    <?php } ?>
+                    <?php } } ?>
                 </table>
                 
             </div> 
