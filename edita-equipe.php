@@ -106,7 +106,8 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                         <!-- Botão -->
                         <div class="d-grid gap-2">
                             <button class="btn btn-primary btn-lg" type="submit">Button</button>
-                        </div>                
+                        </div> 
+                                     
                     </form>
                     
             </div>

@@ -73,25 +73,22 @@
                     
                 </div>
                 <!-- Campos -->
-                <div id="campos">
-                    <form class="form-floating">
-                        <input type="email" class="form-control" id="floatingInputValue" placeholder="Preencha o nome do capitão">
-                        <label for="floatingInputValue">Preencha o nome do capitão</label>
-                        
-                    </form>
-                </div>
-                <div id="campos">
-                    <div class="form-floating">
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                            <option selected>nenhuma equipe</option>
-                            <option value="1">Poggers</option>
-                            <option value="2">Banggers</option>
-                            <option value="3">Noggers</option>
-                        </select>
-                        <label for="floatingSelect">Selecione uma equipe</label>
+                <form action="code/cadastra-capitao.php" method="post">    
+                    <div id="campos">
+                        <label>Insira o nome do Capitão</label>
+                        <input type="text" class="form-control" placeholder="Nome do Capitão" aria-label="Username" aria-describedby="addon-wrapping" required>
                     </div>
-                    
-                </div>    
+                    <div id="campos">
+                        <label>Escolha a equipe para o Capitão</label>    
+                        <select class="form-select" aria-label="Default select example" required>
+                            <option selected></option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        
+                    </div>    
+                </form>
                     
                 <!-- Botão -->
                 <div class="d-grid gap-2">
