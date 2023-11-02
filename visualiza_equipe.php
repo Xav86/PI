@@ -83,10 +83,13 @@
                         $sql = ('SELECT * FROM equipes ORDER BY pontuacao_total DESC');
 
                         $res = mysqli_query($id, $sql);
-                        while ($linha = mysqli_fetch_array($res)) { ?>
-                            <tr> <!-- Necessário corrigir a ordem da lista -->
+                        $posicao = 0;
+                        while ($linha = mysqli_fetch_array($res)) { 
+                            $posicao = $posicao+1;?>
+                        
+                            <tr>
                                 <td>
-                                    <?php echo $linha['id_equipe'];?>
+                                    <?php echo $posicao;?>
                                 </td>
                                 <td>
                                     <?php echo $linha['nome'];?>
@@ -94,12 +97,12 @@
                                 <td style="text-align:end;">
                                     <?php echo $linha['pontuacao_total'];?>
                                 </td>
-                                <td style="text-align:end;"><a href="edita-equipe.php?id_equipe=<?php echo $linha['id_equipe']; ?>">Alterar</a></td>
-                                <td style="text-align:end;"><a href="#">nada ainda</a></td>
+                                <td style="text-align:end;"><a class="btn btn-warning" href="edita-equipe.php?id_equipe=<?php echo $linha['id_equipe']; ?>">Alterar</a></td>
+                                <td style="text-align:end;"><a href="#">Excluir</a></td>
                 
                             </tr>
                 
-                        <?php } ?>
+                    <?php } ?>
                 </table>
                 
             </div> 
