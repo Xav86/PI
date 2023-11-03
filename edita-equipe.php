@@ -48,6 +48,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                         </ul>
 
                     </li>
+
                     <!-- Links da Equipe-->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Equipes</a>
@@ -59,6 +60,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                         </ul>
 
                     </li>
+
                     <!-- Links do Capitão -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitões</a>
@@ -70,6 +72,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                         </ul>
 
                     </li>
+
                     <!-- Deslogar -->
                     <li class="nav-item">
                         <a class="nav-link" href="login.html">Sair</a>
@@ -86,8 +89,9 @@ while ($linha = mysqli_fetch_array($res)) { ?>
     <main>
         <div id="container">
             <div id="box">
+                <!-- Cabeçalho -->
                 <div id="title-box">
-                    <div id="title">  <!-- Cabeçario -->
+                    <div id="title">
                         <h1>Edição de Equipes</h1>
                         <p>Digite para estar alterando <br> o nome da equipe</p>
                         
