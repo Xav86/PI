@@ -9,7 +9,7 @@
     <title>Visualiza Equipe</title>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
- 
+
 </head>
 <body>
     <!-- Barra de Navegação -->
@@ -84,9 +84,10 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
-                            <th scope="col" style="text-align:end;">Pontos</th>
-                            <th scope="col" style="text-align:end;">Editar</th>
-                            <th scope="col" style="text-align:end;">Excluir</th>
+                            <th scope="col" >Pontos</th>
+                            <th scope="col" >Capitão</th>
+                            <th scope="col" >Editar</th>
+                            <th scope="col" >Excluir</th>
                         </tr>
                     </thead>
                     <?php
@@ -108,11 +109,14 @@
                                 <td>
                                     <?php echo $linha['nome'];?>
                                 </td>
-                                <td style="text-align:end;">
+                                <td >
                                     <?php echo $linha['pontuacao_total'];?>
                                 </td>
-                                <td style="text-align:end;"><a class="btn btn-warning" href="edita-equipe.php?id_equipe=<?php echo $linha['id_equipe']; ?>">Alterar</a></td>
-                                <td style="text-align:end;"><a class="btn btn-danger" href="code/deleta-equipe.php?id_equipe=<?php echo $linha['id_equipe']; ?>">Excluir</a></td>
+                                <td >
+                                    <?php if ($linha['capitao'] == ''){echo '<i>sem capitão</i>';}else{echo $linha['capitao'];}?>
+                                </td>
+                                <td ><a class="btn btn-warning" href="edita-equipe.php?id_equipe=<?php echo $linha['id_equipe']; ?>">Alterar</a></td>
+                                <td ><a class="btn btn-danger" href="code/deleta-equipe.php?id_equipe=<?php echo $linha['id_equipe']; ?>">Excluir</a></td>
                 
                             </tr>
                 

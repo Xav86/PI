@@ -1,69 +1,60 @@
-* {
+*
+{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Cabeçalho */
-#title {
+/* Cabeçario */
+#title
+{
     text-align: center;
-    font-size: 24px; /* Aumentei o tamanho da fonte para o cabeçalho */
-    margin-top: 20px; /* Reduzi a margem superior para alinhar melhor com o container */
 }
 
-/* Container principal */
-#container {
+/* Login */
+#container
+{ 
     width: 100%;
     max-width: 500px;
-    margin: 50px auto;
+    /* border: 2px solid red; */
+    margin: 50px auto 0;
     padding: 20px;
-    background-color: #f1f1f1; /* Adicionei uma cor de fundo ao container */
-    border-radius: 10px; /* Reduzi o raio da borda para 10px */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adicionei uma sombra para destacar o container */
 }
 
-/* Formulário de login */
-#logar {
-    padding: 20px;
+#logar
+{
+    width: 100%;
+    max-width: 588px;
+    background-color: lightgray;
+    border-radius: 20px;
+
+    padding: 10px 20px;
 }
 
 /* Campos de preenchimento */
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc; /* Adicionei uma borda para os campos de entrada */
-    border-radius: 5px; /* Arredondei as bordas dos campos de entrada */
-    font-size: 16px; /* Aumentei o tamanho da fonte nos campos de entrada */
+#box
+{
+    padding: 0 10px;
+    /* border: 1px solid red; */
 }
 
-/* Botão de Entrar */
-#entrar {
+/* Botão */
+#entrar
+{
+    margin-top: 30px;
+    /* border: 1px solid red; */
     text-align: center;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff; /* Defini uma cor de fundo para o botão */
-    color: #fff; /* Defini a cor do texto como branco */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-button:hover {
-    background-color: #0056b3; /* Cor de fundo ao passar o mouse sobre o botão */
+.d-grid
+{
+    padding: 0 10px;
 }
 
 /* Texto de Aviso */
-.aviso {
+.aviso
+{
     text-align: center;
     padding: 20px;
-    font-size: 0.8em;
-    color: #ff0000; /* Defini a cor vermelha para o texto de aviso */
+    font-size: 0.8em;   
 }
-
-/* Adicione qualquer outra estilização adicional conforme necessário */
