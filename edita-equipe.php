@@ -66,7 +66,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitões</a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="cadastrar_capitao.html">Cadastrar Capitão</a></li>
+                            <li><a class="dropdown-item" href="cadastrar_capitao.php">Cadastrar Capitão</a></li>
                             <li><a class="dropdown-item" href="#">Visualiza Capitão</a></li>
 
                         </ul>

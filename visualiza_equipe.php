@@ -38,6 +38,7 @@
                         </ul>
 
                     </li>
+
                     <!-- Links da Equipe-->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Equipes</a>
@@ -49,17 +50,19 @@
                         </ul>
 
                     </li>
+
                     <!-- Links do Capitão -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitões</a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="cadastrar_capitao.html">Cadastrar Capitão</a></li>
+                            <li><a class="dropdown-item" href="cadastrar_capitao.php">Cadastrar Capitão</a></li>
                             <li><a class="dropdown-item" href="#">Visualiza Capitão</a></li>
 
                         </ul>
 
                     </li>
+
                     <!-- Deslogar -->
                     <li class="nav-item">
                         <a class="nav-link" href="login.html">Sair</a>

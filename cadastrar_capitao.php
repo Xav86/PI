@@ -56,7 +56,7 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitões</a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="cadastrar_capitao.html">Cadastrar Capitão</a></li>
+                            <li><a class="dropdown-item" href="cadastrar_capitao.php">Cadastrar Capitão</a></li>
                             <li><a class="dropdown-item" href="#">Visualiza Capitão</a></li>
 
                         </ul>
@@ -92,29 +92,41 @@
                     <!-- Nome do capitão -->  
                     <div id="campos">
                         <label>Insira o nome do Capitão</label>
-                        <input type="text" class="form-control" placeholder="Nome do Capitão" aria-label="Username" aria-describedby="addon-wrapping" required>
+                        <input type="text" class="form-control" placeholder="Nome do Capitão" aria-label="Username" aria-describedby="addon-wrapping" name="nome" required>
 
                     </div>
 
                     <!-- Vincular um capitão a uma equipe -->
                     <div id="campos">
-                        <label>Escolha a equipe para o Capitão</label>    
-                        <select class="form-select" aria-label="Default select example" required>
+
+                        <label>Escolha a equipe para o Capitão</label>
+                            
+                        <select class="form-select" aria-label="Default select example" name="equipe" required>
                             <option selected></option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <?php
+                            require 'code/connection.php';
+
+                            $sql = ('SELECT * FROM equipes');
+                            $res = mysqli_query($id, $sql);
+
+                            while ($linha = mysqli_fetch_array($res)) { 
+
+                            if (($linha['statu'] == 'ativo') && ($linha['capitao'] == '')){ ?>
+
+                            <option><?php echo $linha['nome'];?></option>
+                            <?php } } ?>
                         </select>
-                        
+
                     </div> 
+
+                    <!-- Botão -->
+                    <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn-lg" type="submit">Button</button>
+                    
+                    </div>
 
                 </form>
                     
-                <!-- Botão -->
-                <div class="d-grid gap-2">
-                    <button class="btn btn-primary btn-lg" type="button">Button</button>
-                    
-                </div>
 
             </div>
 
