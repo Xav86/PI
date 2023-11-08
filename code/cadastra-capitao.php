@@ -1,5 +1,6 @@
 <?php 
 require 'connection.php';
+
 $nome = $_POST['nome'];
 $equipe = $_POST['equipe'];
 

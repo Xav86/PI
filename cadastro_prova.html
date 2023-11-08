@@ -82,37 +82,63 @@
                 <!-- Cabeçalho -->
                 <div id="title">
                     <h1>Cadastro de Provas</h1>
-                    <p>Faça aqui o cadastro em relação as provas que <br> irão acontecer durante a gincana</p>
+                    <p>Faça aqui o cadastro em relação as provas que irão acontecer durante a gincana e pontos que os colocados receberão</p>
                 </div>
                 <!-- Campos -->
                 <form action="code/cadastra-prova.php" method="post">
                     <div class="row g-3">
                         <div class="col">
+                            <label>Numero da Prova</label>
                             <input type="text" class="form-control" placeholder="Número da Prova" aria-label="NumerodaProva" name="numero">
                         </div>
 
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Pontuação da Prova" aria-label="PontuacaodaProva" name="pontos">
+                            <label>Primeiro lugar</label>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto1" required>
                         </div>
-                    </div> 
+
+                        <div class="col">
+                            <label>Segundo lugar</label>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto2">
+                        </div>
+
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col">
+                            <label>Terceiro lugar</label>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto3">
+                        </div>
+
+                        <div class="col">
+                            <label>Quarto lugar</label>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto4">
+                        </div>
+
+                        <div class="col">
+                            <label>Quinto lugar</label>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto5">
+                        </div>
+
+                    </div>
 
                     <div class="box-campos">
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="Nome da Prova">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Nome da Prova" name="nome">
                             <label for="floatingInput">Nome da prova</label>
 
                         </div>
                         
                         <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                            <label for="floatingTextarea2">Comments</label>
+                            <textarea class="form-control" placeholder="Escreve a Descrição aqui" id="floatingTextarea2" style="height: 100px" name="descricao"></textarea>
+                            <label for="floatingTextarea2">Descrição</label>
 
                         </div>
                         
                     </div>
                     <!-- botão -->
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary btn-lg" type="button">Button</button>
+                        <button class="btn btn-primary btn-lg" type="submit">Cadastrar</button>
                         
                     </div>
                 </form> 
