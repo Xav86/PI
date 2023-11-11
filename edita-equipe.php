@@ -1,9 +1,9 @@
 <?php
-require 'code/connection.php';
+require 'src/connection.php';
 
-$pk = $_GET['id_equipe'];
+$pk = $_GET['id'];
 
-$sql = "Select * from equipes where id_equipe=$pk";
+$sql = "Select * from equipes where id=$pk";
 
 $res = mysqli_query($id,$sql);
 while ($linha = mysqli_fetch_array($res)) { ?>
@@ -15,7 +15,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/style-cadastro-equipe.css">
+    <link rel="stylesheet" href="assets/css/style-cadastro-equipe.css">
     <title>Edição de Equipes</title>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -101,7 +101,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                     <!-- Campos -->
                     <form action="update-equipe.php" method="post">
 
-                        <input type="hidden" name="id" value="<?php echo $linha['id_equipe']; ?>">
+                        <input type="hidden" name="id" value="<?php echo $linha['id']; ?>">
                         <div class="form-floating mb-3">
                             <input class="form-control" id="floatingInput" placeholder="Nome da Equipe" name="nome" value="<?php echo $linha['nome']; } ?>">
                             <label for="floatingInput">Nome da Equipe</label>

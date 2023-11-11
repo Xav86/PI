@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/style-cadastro-capitao.css">
+    <link rel="stylesheet" href="assets/css/style-cadastro-capitao.css">
     <title>Cadastro de Capitões</title>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -88,7 +88,7 @@
                 </div>
 
                 <!-- Inserir dados -->
-                <form action="code/cadastra-capitao.php" method="post">  
+                <form action="src/cadastra-capitao.php" method="post">  
                     <!-- Nome do capitão -->  
                     <div id="campos">
                         <label>Insira o nome do Capitão</label>
@@ -104,14 +104,14 @@
                         <select class="form-select" aria-label="Default select example" name="equipe" required>
                             <option selected></option>
                             <?php
-                            require 'code/connection.php';
+                            require 'src/connection.php';
 
                             $sql = ('SELECT * FROM equipes');
                             $res = mysqli_query($id, $sql);
 
                             while ($linha = mysqli_fetch_array($res)) { 
-
-                            if (($linha['statu'] == 'ativo') && ($linha['capitao'] == '')){ ?>
+// fazer um jeito de puxar os dados, tipo um select * usuarios where usuarios_id=$(alguma coisa)
+                            if (($linha['status'] == 'ativo')){ ?>
 
                             <option><?php echo $linha['nome'];?></option>
                             <?php } } ?>

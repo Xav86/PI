@@ -1,10 +1,10 @@
 <?php
-require 'code/connection.php';
+require 'src/connection.php';
 
 $id_equipe = $_POST['id'];
 $nome = $_POST['nome'];
 
-$sql = "UPDATE equipes SET nome='$nome' WHERE id_equipe='$id_equipe'";
+$sql = "UPDATE equipes SET nome='$nome' WHERE id='$id_equipe'";
 
 $res = mysqli_query($id,$sql);
 

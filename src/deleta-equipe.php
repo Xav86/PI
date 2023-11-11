@@ -1,9 +1,9 @@
 <?php
 require 'connection.php';
 
-$pk = $_GET['id_equipe'];
+$pk = $_GET['id'];
 
-$sql = "UPDATE equipes SET statu='desativo' WHERE id_equipe='$pk'";
+$sql = "UPDATE equipes SET status='desativo' WHERE id='$pk'";
 
 $res = mysqli_query($id, $sql);
 
