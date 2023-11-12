@@ -64,7 +64,7 @@
                     </li>
                     <!-- Cadastrar usuários -->
                     <li class="nav-item">
-                        <a class="nav-link" href="cadastro_usuario.php">Cadastrar Usuários</a>
+                        <a class="nav-link" href="cad_usuario.php">Cadastrar Usuários</a>
                     </li>
 
                     <!-- Deslogar -->
@@ -95,10 +95,16 @@
                 </div>
 
                 <!-- Inserir dados -->
-                <form action="#" method="post">
+                <form action="src/cad_usuario.php" method="post">
                     <!-- Cadastro -->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="floatingInput" placeholder="Nome que o usuário usara para logar" name="nome" required>
+                        <input class="form-control" id="floatingInput" placeholder="Nome do usuário" name="nome" required>
+                        <label for="floatingInput">Nome</label>
+
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="floatingInput" placeholder="Nome que o usuário usara para logar" name="usuario" required>
                         <label for="floatingInput">Usuário</label>
 
                     </div>
@@ -108,7 +114,17 @@
                         <label for="floatingInput">Senha</label>
 
                     </div>
-                    
+                    <!-- Checkbox de nivel do usuário -->
+                    <div id="checkbox">
+                        <select class="form-select" aria-label="Selecione uma opção" name="nivel" require>
+                            <option selected></option>
+                            <option value="cap">Capitão</option>
+                            <option value="adm">Administrador</option>
+
+                        </select>
+
+                    </div>
+
                     <!-- Botão -->
                     <div class="d-grid gap-2">
                         <button class="btn btn-primary btn-lg" type="submit">Button</button>

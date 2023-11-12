@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="assets/css/style-home.css">
-    <title>Menu Principal</title>
+    <link rel="stylesheet" href="assets/css/style-cadastro-inscrito.css">
+    <title>Cadastro de Inscritos</title>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <!-- Logo -->
         <div class="container-fluid">
-            <a class="navbar-brand" href="home_capitao.html">
+            <a class="navbar-brand" href="home_cap.html">
                 <img src="assets/image/cedup_logo.webp" alt="Logo Cedup" width="30" height="24" class="d-inline-block align-text-top">
                 Cedup
             </a>
@@ -52,7 +52,40 @@
     </nav>
 
     <main>
-        <h1>Você está no menu <small><i>de capitão</i></small></h1>
+        <!-- Caixa de Centralizar -->
+        <div id="container">
+            <div id="box">
+                <!-- Cabeçalho -->
+                <div id="title"> 
+                    <h1>Cadastro do Aluno</h1>
+                    <p>Realize a inscrição de um aluno para <br> ele estar participando da gincana!</p>
+                </div>
+                <!-- Campos -->
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Matricula" aria-label="Matricula">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Turma" aria-label="Turma">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome do Aluno">
+                </div>
+                <!-- Botão -->
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn-lg" type="button">Button</button>
+                    
+                </div>
+                <!-- Aviso -->
+                <div class="aviso">
+                    <p>Ao cadastrar o aluno, o mesmo estara atuomaticamente participando da equipe qual você responsavel</p>
+
+                </div>
+            </div>
+        </div>
+
     </main>
 
 </body>
