@@ -90,13 +90,8 @@
                 <!-- Inserir dados -->
                 <form action="src/cadastra-capitao.php" method="post">  
                     <!-- Nome do capitão -->  
-                    <div id="campos">
-                        <label>Insira o nome do Capitão</label>
-                        <input type="text" class="form-control" placeholder="Nome do Capitão" aria-label="Username" aria-describedby="addon-wrapping" name="nome" required>
 
-                    </div>
-
-                    <!-- Vincular um capitão a uma equipe -->
+                    <!-- Escolher uma equipe -->
                     <div id="campos">
 
                         <label>Escolha a equipe para o Capitão</label>
@@ -110,13 +105,30 @@
                             $res = mysqli_query($id, $sql);
 
                             while ($linha = mysqli_fetch_array($res)) { 
-// fazer um jeito de puxar os dados, tipo um select * usuarios where usuarios_id=$(alguma coisa)
+                                
                             if (($linha['status'] == 'ativo')){ ?>
 
                             <option><?php echo $linha['nome'];?></option>
                             <?php } } ?>
                         </select>
+                        
+                        <label>Escolha um capitão para a Equipe</label>
 
+                        <select class="form-select" aria-label="Default select example" name="capitao" required>
+                            <option selected></option>
+                            <?php 
+
+                            $sql2 = ("SELECT * FROM usuarios where nivel='cap'");
+                            $res2 = mysqli_query($id, $sql2);
+
+                            while ($linha2 = mysqli_fetch_array($res2)) {
+                            if (($linha2["status"] == "ativo")){ ?>
+                            
+                            <option><?php echo $linha2['nome']; ?></option>
+
+                            <?php } } ?>
+
+                        </select>
                     </div> 
 
                     <!-- Botão -->

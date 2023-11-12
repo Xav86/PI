@@ -1,11 +1,12 @@
 <?php 
 require 'connection.php';
 
-$nome = $_POST['nome'];
 $equipe = $_POST['equipe'];
+$capitao = $_POST['capitao'];
 
+//falta coisa aqui
 $sql = "UPDATE equipes SET capitao='$nome' WHERE nome='$equipe'";
-
+//SELECT id FROM `equipes` WHERE nome='gustavo';
 $res = mysqli_query($id, $sql);
 
 if ($res) {
