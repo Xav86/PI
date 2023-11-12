@@ -83,12 +83,12 @@
                 <!-- Cabeçalho -->
                 <div id="title">
                     <h1>Cadastro de Capitões</h1>
-                    <p>Faça o cadastro de um capitão e <br> o vincule a uma equipe</p>
+                    <p>Selecione um capitão e o vinclue a ume equipe</p>
                     
                 </div>
 
                 <!-- Inserir dados -->
-                <form action="src/cadastra-capitao.php" method="post">  
+                <form action="src/cad-capitao.php" method="post">  
                     <!-- Nome do capitão -->  
 
                     <!-- Escolher uma equipe -->

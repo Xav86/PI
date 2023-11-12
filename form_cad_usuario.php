@@ -116,10 +116,11 @@
                     </div>
                     <!-- Checkbox de nivel do usuário -->
                     <div id="checkbox">
-                        <select class="form-select" aria-label="Selecione uma opção" name="nivel" require>
+                        <label for="nivel">Nivel de acesso ao sistema</label>
+                        <select class="form-select" aria-label="Selecione uma opção" id="nivel" name="nivel" required>
                             <option selected></option>
-                            <option value="cap">Capitão</option>
-                            <option value="adm">Administrador</option>
+                            <option value="cap">Nivel Capitão</option>
+                            <option value="adm">Nivel Administrador</option>
 
                         </select>
 
