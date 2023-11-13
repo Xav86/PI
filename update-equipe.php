@@ -16,3 +16,5 @@ if ($res)
     echo "Erro ao alterar".mysqli_error($id);
 
 }
+
+?>
