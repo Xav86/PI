@@ -1,3 +1,46 @@
+<?php 
+include("src/connection.php");
+//aqui que chega se tem esses campos, se sim, ele executa o código
+if(isset($_POST['usuario']) || isset($_POST['senha']))
+{
+    //dar aviso de preencher campo, mas meio que não precisa...
+    if(strlen($_POST['usuario']) == 0){
+        // echo'preencha o usuario';
+    }else if(strlen($_POST['senha']) == 0){
+        // echo 'preencha sua senha';
+    } else {
+        //pegando dados e jogando pra dentro da variavel
+        $usuario = $id->real_escape_string($_POST['usuario']);
+        $senha = $id->real_escape_string($_POST['senha']);
+
+        //selecionando os campso usuario e senha na tabela usuarios
+        $sql_code = "SELECT * FROM usuarios WHERE usuario='$usuario' AND senha = '$senha'";
+        $sql_query = $id->query($sql_code) or die('Falha na execução do código SQL:'.$id->error);
+        //pegando o numero de linhas que tem o nome e a senha certa, que se for 1, ele faz os negócio
+        $quantidade = $sql_query->num_rows;
+
+        if($quantidade == 1){
+            $usuario = $sql_query->fetch_assoc();
+            //criando uma sessão
+            if(!isset($_SESSION)){
+                session_start();
+            }
+            //Pegando dados especificos da linha selecionada e colocando dentro de sessões
+            $_SESSION['id'] = $usuario['id'];
+            $_SESSION['nivel'] = $usuario['nivel'];
+            //mandando pra outra pragina
+            if($_SESSION['nivel'] == 'cap'){
+                header("location: placar.php");
+            }
+
+        } else {
+            echo'Falha ao logar! usuario ou senha incorretos';
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,17 +69,17 @@
                     <form action="" method="post">
 
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="User">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="User" name="usuario" required>
                                 <label for="floatingInput">Usuário</label>
                             </div>
                             <div class="form-floating">
-                                <input type="password" class="form-control" id="floatingPassword" placeholder="password">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="senha" required>
                                 <label for="floatingPassword">Senha</label>
                             </div>
                         
                             <div id="entrar">
                                 <div class="d-grid gap-2">
-                                    <a href="home_adm.html" class="btn btn-primary btn-lg">Button</a>
+                                    <button type="submit" class="btn btn-primary btn-lg">Logar</button>
                                     
                                 </div>
 

@@ -1,3 +1,7 @@
+<?php 
+    include("protect.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,6 +11,7 @@
     <title>Placar da Gincana</title>
 </head>
 <body>
-    <h1>Nada ainda</h1>
+    <h1>oi</h1> <?php echo $_SESSION['id'] ?>
+    <a href="logout.php">deslogar</a>
 </body>
 </html>
