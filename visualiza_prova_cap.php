@@ -21,65 +21,36 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <!-- Logo -->
         <div class="container-fluid">
-            <a class="navbar-brand" href="home_adm.php">
-                <img src="assets/image/saga-cedup-logo.png" alt="Logo Cedup" width="35" height="29" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="home_cap.php">
+                <img src="assets/image/saga-cedup-logo.png" alt="Logo Cedup" width="30" height="24" class="d-inline-block align-text-top">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <!-- Links da barra de navegação -->
                 <ul class="nav navbar-nav nav-underline">
-                    <!-- Links das Provas -->
+                    <!-- Links dos Incritos -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Provas</a>
-
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Incritos</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="form_cad_prova.html">Cadastrar Prova</a></li>
-                            <li><a class="dropdown-item" href="visualiza_prova.php">Visualiza Prova</a></li>
+                            <li><a class="dropdown-item" href="form_cad_inscrito.php">Cadastrar Inscritos</a></li>
+                            <li><a class="dropdown-item" href="#">Visualiza Inscritos</a></li>
 
                         </ul>
 
                     </li>
-
-                    <!-- Links da Equipe-->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Equipes</a>
-
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="form_cad_equipe.html">Cadastrar Equipe</a></li>
-                            <li><a class="dropdown-item" href="visualiza_equipe.php">Visualizar Equipe</a></li>
-
-                        </ul>
-
-                    </li>
-
-                    <!-- Links do Capitão -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitões</a>
-
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="form_cad_capitao.php">Cadastrar Capitão</a></li>
-                            <li><a class="dropdown-item" href="#">Visualiza Capitão</a></li>
-
-                        </ul>
-
-                    </li>
-                    <!-- Cadastrar usuários -->
+                    <!-- versão capitão -->
                     <li class="nav-item">
-                        <a class="nav-link" href="form_cad_usuario.php">Cadastrar Usuários</a>
-                    </li>
-                    <!-- Controle de pontuação -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pontuação</a>
+                        <a class="nav-link" href="visualiza_prova_cap.php">Visualizar Provas</a>
                     </li>
 
                     <!-- Deslogar -->
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Sair</a>
                     </li>
-                    
+
                 </ul>
 
             </div>
@@ -101,8 +72,6 @@
                             <th scope="col" >Ponto 3</th>
                             <th scope="col" >Ponto padrão</th>
                             <th scope="col" >Descrição</th>
-                            <th scope="col" >Editar</th>
-                            <th scope="col" >Excluir</th>
                         </tr>
                     </thead>
                     <?php
@@ -127,9 +96,6 @@
                             <td><?php echo $linha['ponto_padrao']; ?></td>
 
                             <td><?php echo $linha['descricao']; ?></td>
-
-                            <td><a class="btn btn-warning" href="edit-equipe.php?id=<?php echo $linha['id']; ?>">Alterar</a></td>
-                            <td><a class="btn btn-danger" href="src/deleta-equipe.php?id=<?php echo $linha['id']; ?>">Excluir</a></td>
 
                         </tr>
 

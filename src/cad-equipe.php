@@ -1,5 +1,8 @@
 <?php
-require 'connection.php';
+include("extra/protect.php");
+
+include("extra/connection.php");
+
 $nome = $_POST['nome'];
 
 $sql = "INSERT INTO equipes (nome) VALUES ('$nome')";

@@ -1,3 +1,7 @@
+<?php 
+    include("src/extra/protect.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,7 +21,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <!-- Logo -->
         <div class="container-fluid">
-            <a class="navbar-brand" href="home_adm.html">
+            <a class="navbar-brand" href="home_adm.php">
                 <img src="assets/image/saga-cedup-logo.png" alt="Logo Cedup" width="35" height="29" class="d-inline-block align-text-top">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,7 +77,7 @@
 
                     <!-- Deslogar -->
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Sair</a>
+                        <a class="nav-link" href="logout.php">Sair</a>
                     </li>
                     
                 </ul>
@@ -100,7 +104,7 @@
                         </tr>
                     </thead>
                     <?php
-                        require 'src/connection.php';
+                        include("src/extra/connection.php");
 
                         $sql = ('SELECT * FROM equipes');
 
@@ -112,12 +116,10 @@
                             ?>
                         
                             <tr>
-                                <td>
-                                    <?php echo $posicao;?>
-                                </td>
-                                <td>
-                                    <?php echo $linha['nome'];?>
-                                </td>
+                                <td><?php echo $posicao;?></td>
+
+                                <td><?php echo $linha['nome'];?></td>
+
                                 <td>
                                     <!-- escrever nome do capitão da equipe -->
                                     <?php if($linha['usuarios_id'] == ''){echo '<i>sem capitão</i>';}else{
@@ -129,6 +131,7 @@
 
                                     } ?>
                                 </td>
+                                
                                 <td ><a class="btn btn-warning" href="edit-equipe.php?id=<?php echo $linha['id']; ?>">Alterar</a></td>
                                 <td ><a class="btn btn-danger" href="src/deleta-equipe.php?id=<?php echo $linha['id']; ?>">Excluir</a></td>
                 

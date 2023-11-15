@@ -1,5 +1,7 @@
 <?php 
-    require 'connection.php';
+include("extra/protect.php");
+
+include("extra/connection.php");
     $nome = $_POST['nome'];
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];

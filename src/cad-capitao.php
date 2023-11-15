@@ -1,5 +1,7 @@
 <?php 
-require 'connection.php';
+include("extra/protect.php");
+
+include("extra/connection.php");
 
 $equipe = $_POST['equipe'];
 $capitao = $_POST['capitao'];

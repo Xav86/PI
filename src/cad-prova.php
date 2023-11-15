@@ -1,5 +1,7 @@
 <?php
-require 'connection.php';
+include("extra/protect.php");
+
+include("extra/connection.php");
 
 $numero = $_POST['numero'];
 $ponto1 = $_POST['ponto1'];

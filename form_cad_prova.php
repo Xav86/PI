@@ -1,3 +1,7 @@
+<?php 
+    include("src/extra/protect.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,20 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="assets/css/style-home-adm.css">
+    <link rel="stylesheet" href="assets/css/style-cadastro-prova.css">
     <link rel="shortcut icon" href="assets/image/fivicon.png" type="image/x-icon">
-    <title>Menu Principal</title>
+    <title>Cadastro de Provas</title>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+   
 </head>
-
 <body>
     <!-- Barra de Navegação -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <!-- Logo -->
         <div class="container-fluid">
-            <a class="navbar-brand" href="home_adm.html">
+            <a class="navbar-brand" href="home_adm.php">
                 <img src="assets/image/saga-cedup-logo.png" alt="Logo Cedup" width="35" height="29" class="d-inline-block align-text-top">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,7 +77,7 @@
 
                     <!-- Deslogar -->
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Sair</a>
+                        <a class="nav-link" href="logout.php">Sair</a>
                     </li>
                     
                 </ul>
@@ -87,9 +90,69 @@
 
     <main>
         <div id="container">
-            <h1>você esta no menu de Adiministrador!</h1>
-            <p><i>Não a nada aqui, por enquanto...</i></p>     
+            <div id="box">
+                <!-- Cabeçalho -->
+                <div id="title">
+                    <h1>Cadastro de Provas</h1>
+                    <p>Faça aqui o cadastro em relação as provas que irão acontecer durante a gincana e pontos que os colocados receberão</p>
+                </div>
+                <!-- Campos -->
+                <form action="src/cad-prova.php" method="post">
+                    <div class="row g-3">
+                        <div class="col">
+                            <label>Numero da Prova</label>
+                            <input type="text" class="form-control" placeholder="Número da Prova" aria-label="NumerodaProva" name="numero">
+                        </div>
+
+                        <div class="col">
+                            <label>Primeiro lugar</label>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto1" required>
+                        </div>
+
+                        <div class="col">
+                            <label>Segundo lugar</label>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto2">
+                        </div>
+
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col">
+                            <label>Terceiro lugar</label>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto3">
+                        </div>
+
+                        <div class="col">
+                            <label>Pontos de Participação</label>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="padrao">
+                        </div>
+
+                    </div>
+
+                    <div class="box-campos">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Nome da Prova" name="nome">
+                            <label for="floatingInput">Nome da prova</label>
+
+                        </div>
+                        
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Escreve a Descrição aqui" id="floatingTextarea2" style="height: 100px" name="descricao"></textarea>
+                            <label for="floatingTextarea2">Descrição</label>
+
+                        </div>
+                        
+                    </div>
+                    <!-- botão -->
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary btn-lg" type="submit">Cadastrar</button>
+                        
+                    </div>
+                </form> 
+            </div>
+
         </div>
+
     </main>
 
 </body>

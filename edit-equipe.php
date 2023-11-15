@@ -1,5 +1,7 @@
 <?php
-require 'src/connection.php';
+include("src/extra/protect.php");
+
+include("src/extra/connection.php");
 
 $pk = $_GET['id'];
 
@@ -27,7 +29,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <!-- Logo -->
         <div class="container-fluid">
-            <a class="navbar-brand" href="home_adm.html">
+            <a class="navbar-brand" href="home_adm.php">
                 <img src="assets/image/saga-cedup-logo.png" alt="Logo Cedup" width="35" height="29" class="d-inline-block align-text-top">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,7 +85,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
 
                     <!-- Deslogar -->
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Sair</a>
+                        <a class="nav-link" href="logout.php">Sair</a>
                     </li>
                     
                 </ul>

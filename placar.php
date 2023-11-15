@@ -1,5 +1,5 @@
 <?php 
-    include("protect.php");
+    include("src/extra/protect.php");
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +12,6 @@
 </head>
 <body>
     <h1>oi</h1> <?php echo $_SESSION['id'] ?>
-    <a href="logout.php">deslogar</a>
+    <a href="src/extra/logout.php">deslogar</a>
 </body>
 </html>

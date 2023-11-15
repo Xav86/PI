@@ -1,5 +1,7 @@
 <?php
-require 'connection.php';
+include("extra/protect.php");
+
+include("extra/connection.php");
 
 $pk = $_GET['id'];
 

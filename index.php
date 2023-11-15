@@ -1,14 +1,17 @@
 <?php 
-include("src/connection.php");
+include("src/extra/connection.php");
 //aqui que chega se tem esses campos, se sim, ele executa o código
 if(isset($_POST['usuario']) || isset($_POST['senha']))
 {
     //dar aviso de preencher campo, mas meio que não precisa...
     if(strlen($_POST['usuario']) == 0){
         // echo'preencha o usuario';
+
     }else if(strlen($_POST['senha']) == 0){
         // echo 'preencha sua senha';
-    } else {
+
+    } else 
+    {
         //pegando dados e jogando pra dentro da variavel
         $usuario = $id->real_escape_string($_POST['usuario']);
         $senha = $id->real_escape_string($_POST['senha']);
@@ -19,7 +22,8 @@ if(isset($_POST['usuario']) || isset($_POST['senha']))
         //pegando o numero de linhas que tem o nome e a senha certa, que se for 1, ele faz os negócio
         $quantidade = $sql_query->num_rows;
 
-        if($quantidade == 1){
+        if($quantidade == 1)
+        {
             $usuario = $sql_query->fetch_assoc();
             //criando uma sessão
             if(!isset($_SESSION)){
@@ -28,13 +32,17 @@ if(isset($_POST['usuario']) || isset($_POST['senha']))
             //Pegando dados especificos da linha selecionada e colocando dentro de sessões
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['nivel'] = $usuario['nivel'];
-            //mandando pra outra pragina
-            if($_SESSION['nivel'] == 'cap'){
-                header("location: placar.php");
-            }
 
-        } else {
-            echo'Falha ao logar! usuario ou senha incorretos';
+            //mandando pra outra pragina
+            if($_SESSION['nivel'] == 'cap')
+            {
+                header("location: home_cap.php");
+
+            } else if ($_SESSION["nivel"] == "adm"){
+                header("location: home_adm.php");
+
+            } else { echo'Falha ao logar! usuario ou senha incorretos'; }
+           
         }
     }
 }

@@ -1,5 +1,7 @@
 <?php
-require 'src/connection.php';
+include("src/extra/protect.php");
+
+include("src/extra/connection.php");
 
 $id_equipe = $_POST['id'];
 $nome = $_POST['nome'];
