@@ -20,7 +20,7 @@ if (($res) && ($res2)) { ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cadastro Bem-sucedido</title>
+    <title>Vinculo bem-sucedido</title>
     <style>
         body {
             display: flex;
@@ -40,7 +40,7 @@ if (($res) && ($res2)) { ?>
     <script>
         setTimeout(function() {
             window.location.href = "../form_cad_capitao.php"; 
-        }, 4000); 
+        }, 2000); 
     </script>
 </body>
 </html>

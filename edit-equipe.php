@@ -29,7 +29,6 @@ while ($linha = mysqli_fetch_array($res)) { ?>
         <div class="container-fluid">
             <a class="navbar-brand" href="home_adm.html">
                 <img src="assets/image/saga-cedup-logo.png" alt="Logo Cedup" width="35" height="29" class="d-inline-block align-text-top">
-                Cedup
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

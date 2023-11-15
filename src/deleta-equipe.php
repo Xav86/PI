@@ -12,7 +12,7 @@ if ($res) { ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cadastro Bem-sucedido</title>
+    <title>exclusão bem-sucedida</title>
     <style>
         body {
             display: flex;
@@ -32,7 +32,7 @@ if ($res) { ?>
     <script>
         setTimeout(function() {
             window.location.href = "../visualiza_equipe.php"; 
-        }, 4000); 
+        }, 2000); 
     </script>
 </body>
 </html>

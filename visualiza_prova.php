@@ -19,7 +19,6 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="home_adm.html">
                 <img src="assets/image/saga-cedup-logo.png" alt="Logo Cedup" width="35" height="29" class="d-inline-block align-text-top">
-                Cedup
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -103,52 +102,37 @@
                         </tr>
                     </thead>
                     <?php
-                        require 'src/connection.php';
+                    require 'src/connection.php';
 
-                        $sql = ('SELECT * FROM provas ORDER BY numero_prova ASC');
-                        $sql2 = ('SELECT * FROM pontuacao');
+                    $sql = 'SELECT p.*, t.* FROM provas p 
+                            JOIN pontuacao t ON p.id = t.id
+                            ORDER BY p.numero_prova asc';;
 
-                        $res = mysqli_query($id, $sql);
-                        $res2 = mysqli_query($id, $sql2);
+                    $res = mysqli_query($id, $sql);
 
-                        while ($linha = mysqli_fetch_array($res)) { 
-                            while ($linha2 = mysqli_fetch_array($res2)) { ?>
-                        
-                            <tr>
-                                <td>
-                                    <?php echo $linha['numero_prova'];?>
-                                </td>
+                    while ($linha = mysqli_fetch_array($res)) { ?>
+                        <tr>
+                            <td><?php echo $linha['numero_prova']; ?></td>
 
-                                <td>
-                                    <?php echo $linha['nome'];?>
-                                </td>
+                            <td><?php echo $linha['nome']; ?></td>
 
-                                <td>
-                                    <?php echo $linha2['primeiro'];?>     
-                                </td>
+                            <td><?php echo $linha['primeiro']; ?></td>
 
-                                <td>
-                                    <?php echo $linha2['segundo'];?>     
-                                </td>
+                            <td><?php echo $linha['segundo']; ?></td>
 
-                                <td>
-                                    <?php echo $linha2['terceiro'];?>     
-                                </td>
+                            <td><?php echo $linha['terceiro']; ?></td>
 
-                                <td>
-                                    <?php echo $linha2['ponto_padrao'];?>     
-                                </td>
+                            <td><?php echo $linha['ponto_padrao']; ?></td>
 
-                                <td>
-                                    <?php echo $linha['descricao'];?>
-                                </td>
+                            <td><?php echo $linha['descricao']; ?></td>
 
-                                <td ><a class="btn btn-warning" href="edit-equipe.php?id=<?php echo $linha['id']; ?>">Alterar</a></td>
-                                <td ><a class="btn btn-danger" href="src/deleta-equipe.php?id=<?php echo $linha['id']; ?>">Excluir</a></td>
+                            <td><a class="btn btn-warning" href="edit-equipe.php?id=<?php echo $linha['id']; ?>">Alterar</a></td>
+                            <td><a class="btn btn-danger" href="src/deleta-equipe.php?id=<?php echo $linha['id']; ?>">Excluir</a></td>
 
-                            </tr>
-                
-                    <?php  } } ?>
+                        </tr>
+
+                    <?php } ?>
+                    
                 </table>
                 
             </div> 

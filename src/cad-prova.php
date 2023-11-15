@@ -22,10 +22,40 @@ $sql2 = "INSERT INTO provas (nome,descricao,numero_prova,pontuacao_id) values ('
 
 $res2 = mysqli_query($id, $sql2);
 
-if (($res) && ($res2)) {
-    echo "Cadastrado com sucesso";
-} else {
-    echo "Erro ao cadastrar " . mysqli_error($id);
-}
+if (($res) && ($res2)) { ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro bem-sucedido</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Cadastrado com sucesso</h1>
+        <p style="color:lightslategray;"><small><i>prova cadastrada com sucesso, caso haja algum problema contate um adiministrador</i></small></p>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "../form_cad_prova.html"; 
+        }, 2000); 
+    </script>
+</body>
+</html>
+
+<?php 
+} 
+else 
+{
+    echo "Erro ao excluir o registro do banco de dados";
+}
 ?>
