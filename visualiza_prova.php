@@ -128,7 +128,7 @@ include("src/extra/protect-adm.php");
 
                             <td><?php echo $linha['descricao']; ?></td>
 
-                            <td><a class="btn btn-warning" href="edit-equipe.php?id=<?php echo $linha['id']; ?>">Alterar</a></td>
+                            <td><a class="btn btn-warning" href="edit-prova.php?id=<?php echo $linha['id']; ?>">Alterar</a></td>
                             <td><a class="btn btn-danger" href="src/deleta-equipe.php?id=<?php echo $linha['id']; ?>">Excluir</a></td>
 
                         </tr>

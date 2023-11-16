@@ -113,7 +113,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
 
                         <input type="hidden" name="id" value="<?php echo $linha['id']; ?>" disabled>
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="floatingInput" placeholder="Nome da Equipe" name="nome" value="<?php echo $linha['nome']; } ?>">
+                            <input class="form-control" id="floatingInput" placeholder="Nome da Equipe" name="nome" value="<?php echo $linha['nome']; } ?>" autocomplete="off" spellcheck="false">
                             <label for="floatingInput">Nome da Equipe</label>
                         </div>
                         

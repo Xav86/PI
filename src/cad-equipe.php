@@ -33,7 +33,7 @@ if ($res) { ?>
 
     <script>
         setTimeout(function() {
-            window.location.href = "../form_cad_equipe.html"; 
+            window.location.href = "../form_cad_equipe.php"; 
         }, 2000); 
     </script>
 </body>

@@ -106,19 +106,19 @@ include("src/extra/protect-adm.php");
                 <form action="src/cad_usuario.php" method="post">
                     <!-- Cadastro -->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="floatingInput" placeholder="Nome do usuário" name="nome" required>
+                        <input class="form-control" id="floatingInput" placeholder="Nome do usuário" name="nome" required autocomplete="off" spellcheck="false">
                         <label for="floatingInput">Nome</label>
 
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="floatingInput" placeholder="Nome que o usuário usara para logar" name="usuario" required>
+                        <input class="form-control" id="floatingInput" placeholder="Nome que o usuário usara para logar" name="usuario" required autocomplete="off" spellcheck="false">
                         <label for="floatingInput">Usuário</label>
 
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="floatingInput" placeholder="Senha do usuário" name="senha" type="password" required>
+                        <input class="form-control" id="floatingInput" placeholder="Senha do usuário" name="senha" type="password" required autocomplete="off" spellcheck="false">
                         <label for="floatingInput">Senha</label>
 
                     </div>
