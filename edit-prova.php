@@ -1,6 +1,14 @@
-<?php 
+<?php
 include("src/extra/protect-adm.php");
-?>
+
+include("src/extra/connection.php");
+
+$pk = $_GET['id'];
+
+$sql = "SELECT p.*, t.* FROM provas p JOIN pontuacao t ON p.id = t.id where p.id = $pk";
+
+$res = mysqli_query($id,$sql);
+while ($linha = mysqli_fetch_array($res)) { ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -97,11 +105,12 @@ include("src/extra/protect-adm.php");
                     <p>Faça aqui o cadastro em relação as provas que irão acontecer durante a gincana e pontos que os colocados receberão</p>
                 </div>
                 <!-- Campos -->
-                <form action="src/cad-prova.php" method="post">
+                <form action="#" method="post">
+                <input type="hidden" name="id" value="<?php echo $linha['id']; ?>" disabled>
                     <div class="row g-3">
                         <div class="col">
                             <label>Numero da Prova</label>
-                            <input type="text" class="form-control" placeholder="Número da Prova" aria-label="NumerodaProva" name="numero" autocomplete="off" spellcheck="false" required>
+                            <input type="text" class="form-control" placeholder="Número da Prova" aria-label="NumerodaProva" name="numero" autocomplete="off" spellcheck="false" required" value="<?php echo $linha['numero_prova'];  ?>">
                         </div>
 
                         <div class="col">
@@ -131,14 +140,14 @@ include("src/extra/protect-adm.php");
 
                     <div class="box-campos">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="Nome da Prova" name="nome">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Nome da Prova" name="nome" value="<?php echo $linha['nome'];  ?>">
                             <label for="floatingInput" required>Nome da prova</label>
 
                         </div>
                         
                         <div class="form-floating">
                             <textarea class="form-control" placeholder="Escreve a Descrição aqui" id="floatingTextarea2" style="height: 100px" name="descricao" autocomplete="off" spellcheck="false"></textarea>
-                            <label for="floatingTextarea2">Descrição</label>
+                            <label for="floatingTextarea2"  <?php } ?>>Descrição</label>
 
                         </div>
                         
