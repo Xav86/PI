@@ -1,5 +1,5 @@
 <?php 
-    include("src/extra/protect.php");
+include("src/extra/protect-cap.php");
 ?>
 
 <!DOCTYPE html>
@@ -71,15 +71,15 @@
                 <!-- Campos -->
                 <div class="row">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Matricula" aria-label="Matricula">
+                        <input type="text" class="form-control" placeholder="Matricula" aria-label="Matricula" autocomplete="off" spellcheck="false">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Turma" aria-label="Turma">
+                        <input type="text" class="form-control" placeholder="Turma" aria-label="Turma" autocomplete="off" spellcheck="false">
                     </div>
                 </div>
 
                 <div class="mb-3">
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome do Aluno">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome do Aluno" autocomplete="off" spellcheck="false">
                 </div>
                 <!-- Botão -->
                 <div class="d-grid gap-2">

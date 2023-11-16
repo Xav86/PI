@@ -1,5 +1,5 @@
 <?php 
-    include("src/extra/protect.php");
+include("src/extra/protect-cap.php");
 ?>
 
 <!DOCTYPE html>

@@ -1,5 +1,5 @@
 <?php 
-    include("src/extra/protect.php");
+include("src/extra/protect-adm.php");
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +37,7 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Provas</a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="form_cad_prova.html">Cadastrar Prova</a></li>
+                            <li><a class="dropdown-item" href="form_cad_prova.php">Cadastrar Prova</a></li>
                             <li><a class="dropdown-item" href="visualiza_prova.php">Visualiza Prova</a></li>
 
                         </ul>
@@ -49,7 +49,7 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Equipes</a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="form_cad_equipe.html">Cadastrar Equipe</a></li>
+                            <li><a class="dropdown-item" href="form_cad_equipe.php">Cadastrar Equipe</a></li>
                             <li><a class="dropdown-item" href="visualiza_equipe.php">Visualizar Equipe</a></li>
 
                         </ul>

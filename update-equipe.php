@@ -1,5 +1,5 @@
 <?php
-include("src/extra/protect.php");
+include("src/extra/protect-adm.php");
 
 include("src/extra/connection.php");
 

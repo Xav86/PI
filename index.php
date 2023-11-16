@@ -32,19 +32,23 @@ if(isset($_POST['usuario']) || isset($_POST['senha']))
             //Pegando dados especificos da linha selecionada e colocando dentro de sessões
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['nivel'] = $usuario['nivel'];
+            $_SESSION['status'] = $usuario['status'];
 
             //mandando pra outra pragina
-            if($_SESSION['nivel'] == 'cap')
+            if(($_SESSION['nivel'] == 'cap') && (($_SESSION['status']) == 'ativo'))
             {
-                header("location: home_cap.php");
-
-            } else if ($_SESSION["nivel"] == "adm"){
+                    header("location: home_cap.php");
+                    
+            } else if (($_SESSION["nivel"] == "adm") && ($_SESSION['status'] == 'ativo'))
+            {
                 header("location: home_adm.php");
 
-            } else { echo'Falha ao logar! usuario ou senha incorretos'; }
+            } else { echo'Falha ao logar! usuario ou senha incorretos, ou usuário não esta ativo'; }
            
         }
+
     }
+    
 }
 
 ?>

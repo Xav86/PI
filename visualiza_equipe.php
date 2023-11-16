@@ -1,5 +1,5 @@
 <?php 
-    include("src/extra/protect.php");
+include("src/extra/protect-adm.php");
 ?>
 
 <!DOCTYPE html>
