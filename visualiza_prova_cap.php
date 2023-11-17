@@ -81,7 +81,9 @@ include("src/extra/protect-cap.php");
 
                     $res = mysqli_query($id, $sql);
 
-                    while ($linha = mysqli_fetch_array($res)) { ?>
+                    while ($linha = mysqli_fetch_array($res)) { 
+                        if ($linha['status'] == 'ativo') {
+                        ?>
                         <tr>
                             <td><?php echo $linha['numero_prova']; ?></td>
 
@@ -99,7 +101,7 @@ include("src/extra/protect-cap.php");
 
                         </tr>
 
-                    <?php } ?>
+                    <?php } } ?>
                     
                 </table>
                 
