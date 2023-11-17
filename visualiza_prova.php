@@ -112,7 +112,9 @@ include("src/extra/protect-adm.php");
 
                     $res = mysqli_query($id, $sql);
 
-                    while ($linha = mysqli_fetch_array($res)) { ?>
+                    while ($linha = mysqli_fetch_array($res)) { 
+                        if ($linha['status'] == 'ativo') {
+                        ?>
                         <tr>
                             <td><?php echo $linha['numero_prova']; ?></td>
 
@@ -129,11 +131,11 @@ include("src/extra/protect-adm.php");
                             <td><?php echo $linha['descricao']; ?></td>
 
                             <td><a class="btn btn-warning" href="edit-prova.php?id=<?php echo $linha['id']; ?>">Alterar</a></td>
-                            <td><a class="btn btn-danger" href="src/deleta-equipe.php?id=<?php echo $linha['id']; ?>">Excluir</a></td>
+                            <td><a class="btn btn-danger" href="src/deleta-prova.php?id=<?php echo $linha['id']; ?>">Excluir</a></td>
 
                         </tr>
 
-                    <?php } ?>
+                    <?php } } ?>
                     
                 </table>
                 

@@ -105,8 +105,8 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                     <p>Faça aqui o cadastro em relação as provas que irão acontecer durante a gincana e pontos que os colocados receberão</p>
                 </div>
                 <!-- Campos -->
-                <form action="#" method="post">
-                <input type="hidden" name="id" value="<?php echo $linha['id']; ?>" disabled>
+                <form action="update-prova.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $linha['id']; ?>">
                     <div class="row g-3">
                         <div class="col">
                             <label>Numero da Prova</label>
@@ -115,12 +115,12 @@ while ($linha = mysqli_fetch_array($res)) { ?>
 
                         <div class="col">
                             <label>Primeiro lugar</label>
-                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto1" required autocomplete="off" spellcheck="false">
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto1" required autocomplete="off" spellcheck="false" value="<?php echo $linha['primeiro'];  ?>">
                         </div>
 
                         <div class="col">
                             <label>Segundo lugar</label>
-                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto2" autocomplete="off" spellcheck="false" required>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto2" autocomplete="off" spellcheck="false" required value="<?php echo $linha['segundo'];  ?>">
                         </div>
 
                     </div>
@@ -128,12 +128,12 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                     <div class="row g-3">
                         <div class="col">
                             <label>Terceiro lugar</label>
-                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto3" autocomplete="off" spellcheck="false" required>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto3" autocomplete="off" spellcheck="false" required value="<?php echo $linha['terceiro'];  ?>">
                         </div>
 
                         <div class="col">
                             <label>Pontos de Participação</label>
-                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="padrao" autocomplete="off" spellcheck="false" required>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="padrao" autocomplete="off" spellcheck="false" required value="<?php echo $linha['ponto_padrao'];  ?>">
                         </div>
 
                     </div>
@@ -146,7 +146,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                         </div>
                         
                         <div class="form-floating">
-                            <textarea class="form-control" placeholder="Escreve a Descrição aqui" id="floatingTextarea2" style="height: 100px" name="descricao" autocomplete="off" spellcheck="false"></textarea>
+                            <textarea class="form-control" placeholder="Escreve a Descrição aqui" id="floatingTextarea2" style="height: 100px" name="descricao" autocomplete="off" spellcheck="false"><?php echo $linha['descricao'];  ?></textarea>
                             <label for="floatingTextarea2"  <?php } ?>>Descrição</label>
 
                         </div>

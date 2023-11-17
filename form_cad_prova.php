@@ -131,7 +131,7 @@ include("src/extra/protect-adm.php");
 
                     <div class="box-campos">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="Nome da Prova" name="nome">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Nome da Prova" name="nome" autocomplete="off" spellcheck="false">
                             <label for="floatingInput" required>Nome da prova</label>
 
                         </div>
