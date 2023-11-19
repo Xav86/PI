@@ -36,7 +36,7 @@ include("src/extra/protect-cap.php");
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Incritos</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_inscrito.php">Cadastrar Inscritos</a></li>
-                            <li><a class="dropdown-item" href="#">Visualiza Inscritos</a></li>
+                            <li><a class="dropdown-item" href="visualiza_inscrito.php">Visualiza Inscritos</a></li>
 
                         </ul>
 

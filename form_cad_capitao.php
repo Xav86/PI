@@ -118,7 +118,7 @@ include("src/extra/protect-adm.php");
 
                             while ($linha = mysqli_fetch_array($res)) { 
                                 
-                            if (($linha['status'] == 'ativo')){ ?>
+                            if (($linha['status'] == 'ativo') && $linha['usuarios_id'] == ''){ ?>
 
                             <option><?php echo $linha['nome'];?></option>
                             <?php } } ?>
@@ -132,6 +132,8 @@ include("src/extra/protect-adm.php");
 
                             $sql2 = ("SELECT * FROM usuarios where nivel='cap'");
                             $res2 = mysqli_query($id, $sql2);
+                            $linha = mysqli_fetch_array($res);
+                            
 
                             while ($linha2 = mysqli_fetch_array($res2)) {
                             if (($linha2["status"] == "ativo")){ ?>

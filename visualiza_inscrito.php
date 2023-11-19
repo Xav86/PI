@@ -9,9 +9,9 @@ include("src/extra/protect-cap.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="assets/css/style-cadastro-inscrito.css">
+    <link rel="stylesheet" href="assets/css/style-visualiza-equipe.css">
     <link rel="shortcut icon" href="assets/image/fivicon.png" type="image/x-icon">
-    <title>Cadastro de Inscritos</title>
+    <title>Visualiza Equipe</title>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
@@ -60,46 +60,63 @@ include("src/extra/protect-cap.php");
     </nav>
 
     <main>
-        <!-- Caixa de Centralizar -->
-        <div id="container">
-            <div id="box">
-                <!-- Cabeçalho -->
-                <div id="title"> 
-                    <h1>Cadastro do Aluno</h1>
-                    <p>Realize a inscrição de um aluno para <br> ele estar participando da gincana!</p>
-                </div>
-                <!-- Campos -->
-                <form action="src/cad-inscrito.php" method="post">
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Matricula" aria-label="Matricula" autocomplete="off" spellcheck="false" name="matricula">
-                        </div>
+        
+            <div id="tabela">
 
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Turma" aria-label="Turma" autocomplete="off" spellcheck="false" name="turma">
-                        </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Matricula</th>
+                            <th scope="col" >Nome</th>
+                            <th scope="col" >Turma</th>
+                            <th scope="col" >Editar</th>
+                            <th scope="col" >Excluir</th>
+                        </tr>
+                    </thead>
+                    <?php
+                        include("src/extra/connection.php");
+                        if (!isset($_SESSION)){
+                            session_start();
+                        }
+                        //pegando id do usuarios logado
+                        $cod = $_SESSION['id'];
+                        //vendo qual a equipe q ele ta vinculado pela chave estrangeira
+                        $sql = "SELECT * FROM equipes where usuarios_id='$cod'";
+                        $res = mysqli_query($id, $sql);
+                        $linha = mysqli_fetch_array($res);
+                        //tacando na variavel cod o id da equipe
+                        $cod = $linha['id'];
 
-                    </div>
-                    
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome do Aluno" autocomplete="off" spellcheck="false" name="nome">
+                        //pegando o nome dos inscritos que tem o chave estrangeira = id da equipe do usuarios logado
+                        $sql = ("SELECT * FROM inscritos where equipes_id='$cod'");
 
-                    </div>
-                    <!-- Botão -->
-                    <div class="d-grid gap-2">
-                        <button class="btn btn-primary btn-lg" type="submit">Cadastrar</button>
+                        $res = mysqli_query($id, $sql);
                         
-                    </div>
+                        $posicao = 0;
+                        while ($linha = mysqli_fetch_array($res)) { 
+                            if ($linha['status'] == 'ativo') {
+                            $posicao = $posicao+1;
+                            ?>
+                        
+                            <tr>
+                                <td><?php echo $posicao;?></td>
 
-                </form>
+                                <td><?php echo $linha['matricula'];?></td>
 
-                <!-- Aviso -->
-                <div class="aviso">
-                    <p>Ao cadastrar o aluno, o mesmo estara atuomaticamente participando da equipe qual você responsavel</p>
+                                <td><?php echo $linha['nome'];?></td>
 
-                </div>
+                                <td><?php echo $linha['turma'];?></td>
+                                
+                                <td ><a class="btn btn-warning" href="edit-inscrito.php?id=<?php echo $linha['id']; ?>">Alterar</a></td>
+                                <td ><a class="btn btn-danger" href="src/deleta-inscrito.php?id=<?php echo $linha['id']; ?>">Excluir</a></td>
+                
+                            </tr>
+                
+                    <?php } } ?>
+                </table>
+                
             </div>
-        </div>
 
     </main>
 

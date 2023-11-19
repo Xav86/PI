@@ -6,7 +6,7 @@ if (!isset($_SESSION))
 
 if (!isset($_SESSION["id"]) || ($_SESSION['nivel'] <> 'adm'))
 {
-  die("Você deve estar logado para chegar a está pagina. <p><a href=\"index.php\">logar</a></p>");
+  die("Você deve estar logado ou ter acesso para chegar a está pagina. <p><a href=\"index.php\">logar</a></p>");
 }
 
 ?>

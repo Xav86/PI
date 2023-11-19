@@ -5,7 +5,7 @@ include("src/extra/connection.php");
 
 $pk = $_GET['id'];
 
-$sql = "Select * from equipes where id=$pk";
+$sql = "SELECT * FROM equipes where id=$pk";
 
 $res = mysqli_query($id,$sql);
 while ($linha = mysqli_fetch_array($res)) { ?>
