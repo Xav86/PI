@@ -22,31 +22,7 @@
 
 #box
 {
-    padding: 10px;
-    /* border: 1px solid red; */
-    background-color: lightgray;
+    padding: 0 10px;
+    border: 3px solid black;
     border-radius: 20px;
-}
-
-/* Titulo */
-#title
-{
-    text-align: center;
-}
-
-/* Campos */
-#campos
-{
-    padding: 10px;
-}
-
-.form-select
-{
-    margin: 10px 0;
-}
-
-/* Botão */
-.d-grid
-{
-    padding: 10px;
 }

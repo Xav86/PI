@@ -98,6 +98,7 @@ if(isset($_POST['usuario']) || isset($_POST['senha']))
                             </div>
 
                     </form>
+                    
                     <div class="aviso">
                         <p>Caso esteja tendo alguma dificuldade favor entrar em contato com pessoal da administração.</p>
                         

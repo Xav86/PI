@@ -5,6 +5,12 @@
     padding: 0;
 }
 
+/* navbar */
+.navbar
+{
+    background-color: #ffd131 !important;
+}
+
 #container
 {
     width: 100%;

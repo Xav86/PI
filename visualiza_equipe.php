@@ -67,12 +67,18 @@ include("src/extra/protect-adm.php");
 
                     </li>
                     <!-- Cadastrar usuários -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="form_cad_usuario.php">Cadastrar Usuários</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">usuarios</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="form_cad_usuario.php">Cadastrar Usuários</a></li>
+                            <li><a class="dropdown-item" href="visualiza_usuario.php">Visualiza Usuários</a></li>
+
+                        </ul>
                     </li>
                     <!-- Controle de pontuação -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pontuação</a>
+                        <a class="nav-link" href="pontuacao.php">Pontuação</a>
                     </li>
 
                     <!-- Deslogar -->
@@ -86,7 +92,7 @@ include("src/extra/protect-adm.php");
 
         </div>
 
-    </nav>
+    </nav> 
 
     <main>
         
@@ -112,7 +118,7 @@ include("src/extra/protect-adm.php");
                         $posicao = 0;
                         while ($linha = mysqli_fetch_array($res)) { 
                             if ($linha['status'] == 'ativo') {
-                            $posicao = $posicao+1;
+                            $posicao++;
                             ?>
                         
                             <tr>

@@ -9,14 +9,13 @@ include("src/extra/protect-adm.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="assets/css/style-home-adm.css">
+    <link rel="stylesheet" href="assets/css/style-visualiza-usuarios.css">
     <link rel="shortcut icon" href="assets/image/fivicon.png" type="image/x-icon">
-    <title>Menu Principal</title>
+    <title>Visualiza Prova</title>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </head>
-
 <body>
     <!-- Barra de Navegação -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -94,12 +93,54 @@ include("src/extra/protect-adm.php");
         </div>
 
     </nav> 
-
+ 
     <main>
-        <div id="container">
-            <h1>você esta no menu de Adiministrador!</h1>
-            <p><i>Não a nada aqui, por enquanto...</i></p>     
-        </div>
+            <div id="tabela">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col" >Usuario</th>
+                            <th scope="col">Nivel de acesso</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Excluir</th>
+
+                        </tr>
+                    </thead>
+                    <?php
+                    include("src/extra/connection.php");
+
+                    $sql = 'SELECT * FROM usuarios';
+
+                    $res = mysqli_query($id, $sql);
+                    $posicao = 0;
+
+                    while ($linha = mysqli_fetch_array($res)) { 
+                        if ($linha['status'] == 'ativo') {
+                            $posicao++;
+                        ?>
+                        <tr>
+                            <td><?php echo $posicao ?></td>
+
+                            <td><?php echo $linha['nome']; ?></td>
+
+                            <td><?php echo $linha['usuario']; ?></td>
+
+                            <td><?php echo $linha['nivel']; ?></td>
+
+                            <td><a class="btn btn-warning" href="edit-usuario.php?id=<?php echo $linha['id']; ?>">Alterar</a></td>
+                            <td><a class="btn btn-danger" href="src/deleta-usuario.php?id=<?php echo $linha['id']; ?>">Excluir</a></td>
+
+                        </tr>
+
+                    <?php } } ?>
+                    
+                </table>
+                
+            </div> 
+
     </main>
 
 </body>

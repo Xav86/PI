@@ -1,25 +1,20 @@
-<?php 
-include("src/extra/protect-adm.php");
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="assets/css/style-home-adm.css">
+    
+    <link rel="stylesheet" href="assets/css/style-pontuacao.css">
     <link rel="shortcut icon" href="assets/image/fivicon.png" type="image/x-icon">
-    <title>Menu Principal</title>
-
+    <title>Pontuação</title>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </head>
-
 <body>
-    <!-- Barra de Navegação -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <!-- Barra de Navegação -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <!-- Logo -->
         <div class="container-fluid">
             <a class="navbar-brand" href="home_adm.php">
@@ -97,9 +92,12 @@ include("src/extra/protect-adm.php");
 
     <main>
         <div id="container">
-            <h1>você esta no menu de Adiministrador!</h1>
-            <p><i>Não a nada aqui, por enquanto...</i></p>     
+            <div id="box">
+                <h1>alow</h1>
+            </div>
+
         </div>
+
     </main>
 
 </body>
