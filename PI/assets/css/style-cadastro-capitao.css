@@ -1,0 +1,52 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar */
+.navbar
+{
+    background-color: #ffd131 !important;
+}
+
+#container
+{ 
+    width: 100%;
+    max-width: 500px;
+    /* border: 2px solid red; */
+    margin: 50px auto 0;
+    padding: 20px;
+}
+
+#box
+{
+    padding: 10px;
+    /* border: 1px solid red; */
+    background-color: lightgray;
+    border-radius: 20px;
+}
+
+/* Titulo */
+#title
+{
+    text-align: center;
+}
+
+/* Campos */
+#campos
+{
+    padding: 10px;
+}
+
+.form-select
+{
+    margin: 10px 0;
+}
+
+/* Botão */
+.d-grid
+{
+    padding: 10px;
+}
