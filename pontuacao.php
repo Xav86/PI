@@ -1,3 +1,7 @@
+<?php 
+include("src/extra/protect-adm.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,8 +17,8 @@
 
 </head>
 <body>
-        <!-- Barra de Navegação -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <!-- Logo -->
         <div class="container-fluid">
             <a class="navbar-brand" href="home_adm.php">
@@ -33,7 +37,7 @@
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_prova.php">Cadastrar Prova</a></li>
-                            <li><a class="dropdown-item" href="visualiza_prova.php">Visualiza Prova</a></li>
+                            <li><a class="dropdown-item" href="visualiza_prova.php">Visualizar Prova</a></li>
 
                         </ul>
 
@@ -53,22 +57,22 @@
 
                     <!-- Links do Capitão -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitões</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitães</a>
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_capitao.php">Cadastrar Capitão</a></li>
-                            <li><a class="dropdown-item" href="#">Visualiza Capitão</a></li>
+                            <li><a class="dropdown-item" href="#">Visualizar Capitão</a></li>
 
                         </ul>
 
                     </li>
                     <!-- Cadastrar usuários -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">usuarios</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="form_cad_usuario.php">Cadastrar Usuários</a></li>
-                            <li><a class="dropdown-item" href="visualiza_usuario.php">Visualiza Usuários</a></li>
+                            <li><a class="dropdown-item" href="form_cad_usuario.php">Cadastrar Usuário</a></li>
+                            <li><a class="dropdown-item" href="visualiza_usuario.php">Visualizar Usuário</a></li>
 
                         </ul>
                     </li>

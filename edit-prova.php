@@ -45,7 +45,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_prova.php">Cadastrar Prova</a></li>
-                            <li><a class="dropdown-item" href="visualiza_prova.php">Visualiza Prova</a></li>
+                            <li><a class="dropdown-item" href="visualiza_prova.php">Visualizar Prova</a></li>
 
                         </ul>
 
@@ -65,22 +65,22 @@ while ($linha = mysqli_fetch_array($res)) { ?>
 
                     <!-- Links do Capitão -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitões</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitães</a>
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_capitao.php">Cadastrar Capitão</a></li>
-                            <li><a class="dropdown-item" href="#">Visualiza Capitão</a></li>
+                            <li><a class="dropdown-item" href="#">Visualizar Capitão</a></li>
 
                         </ul>
 
                     </li>
                     <!-- Cadastrar usuários -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">usuarios</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="form_cad_usuario.php">Cadastrar Usuários</a></li>
-                            <li><a class="dropdown-item" href="visualiza_usuario.php">Visualiza Usuários</a></li>
+                            <li><a class="dropdown-item" href="form_cad_usuario.php">Cadastrar Usuário</a></li>
+                            <li><a class="dropdown-item" href="visualiza_usuario.php">Visualizar Usuário</a></li>
 
                         </ul>
                     </li>
@@ -108,14 +108,14 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                 <!-- Cabeçalho -->
                 <div id="title">
                     <h1>Cadastro de Provas</h1>
-                    <p>Faça aqui o cadastro em relação as provas que irão acontecer durante a gincana e pontos que os colocados receberão</p>
+                    <p>Faça aqui a edição dos dados da prova selecionada</p>
                 </div>
                 <!-- Campos -->
                 <form action="update-prova.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $linha['id']; ?>">
                     <div class="row g-3">
                         <div class="col">
-                            <label>Numero da Prova</label>
+                            <label>Número da Prova</label>
                             <input type="text" class="form-control" placeholder="Número da Prova" aria-label="NumerodaProva" name="numero" autocomplete="off" spellcheck="false" required" value="<?php echo $linha['numero_prova'];  ?>">
                         </div>
 
@@ -160,7 +160,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                     </div>
                     <!-- botão -->
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary btn-lg" type="submit">Cadastrar</button>
+                        <button class="btn btn-primary btn-lg" type="submit">Salvar alterações</button>
                         
                     </div>
                 </form> 

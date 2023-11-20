@@ -37,7 +37,7 @@ include("src/extra/protect-adm.php");
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_prova.php">Cadastrar Prova</a></li>
-                            <li><a class="dropdown-item" href="visualiza_prova.php">Visualiza Prova</a></li>
+                            <li><a class="dropdown-item" href="visualiza_prova.php">Visualizar Prova</a></li>
 
                         </ul>
 
@@ -57,22 +57,22 @@ include("src/extra/protect-adm.php");
 
                     <!-- Links do Capitão -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitões</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitães</a>
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_capitao.php">Cadastrar Capitão</a></li>
-                            <li><a class="dropdown-item" href="#">Visualiza Capitão</a></li>
+                            <li><a class="dropdown-item" href="#">Visualizar Capitão</a></li>
 
                         </ul>
 
                     </li>
                     <!-- Cadastrar usuários -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">usuarios</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="form_cad_usuario.php">Cadastrar Usuários</a></li>
-                            <li><a class="dropdown-item" href="visualiza_usuario.php">Visualiza Usuários</a></li>
+                            <li><a class="dropdown-item" href="form_cad_usuario.php">Cadastrar Usuário</a></li>
+                            <li><a class="dropdown-item" href="visualiza_usuario.php">Visualizar Usuário</a></li>
 
                         </ul>
                     </li>
@@ -102,7 +102,7 @@ include("src/extra/protect-adm.php");
                     <!-- Cabeçalho -->
                     <div id="title">
                         <h1>Cadastro de Usuários</h1>
-                        <p>Cadastre um usuário e selecione o seu nivel de acesso dentro do sistema.</p>
+                        <p>Cadastre um usuário e selecione o seu<br>nível de acesso dentro do sistema.</p>
 
                     </div>
 
@@ -130,11 +130,11 @@ include("src/extra/protect-adm.php");
                     </div>
                     <!-- Checkbox de nivel do usuário -->
                     <div id="checkbox">
-                        <label for="nivel">Nivel de acesso ao sistema</label>
+                        <label for="nivel">Nível de acesso ao sistema</label>
                         <select class="form-select" aria-label="Selecione uma opção" id="nivel" name="nivel" required>
                             <option selected></option>
-                            <option value="cap">Nivel Capitão</option>
-                            <option value="adm">Nivel Administrador</option>
+                            <option value="cap">Nível Capitão</option>
+                            <option value="adm">Nível Administrador</option>
 
                         </select>
 
@@ -142,7 +142,7 @@ include("src/extra/protect-adm.php");
 
                     <!-- Botão -->
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary btn-lg" type="submit">Button</button>
+                        <button class="btn btn-primary btn-lg" type="submit">Cadastrar</button>
 
                     </div> 
                      

@@ -74,7 +74,7 @@ if(isset($_POST['usuario']) || isset($_POST['senha']))
 
                 <div id="title"> <!-- Cabeçario -->
                     <h1>Login</h1>
-                    <p>Bem vindo a saga! efetue seu login ao preencher os campos abaixo.</p>
+                    <p>Bem-vindo à Saga! efetue seu login preenchndo os campos abaixo.</p>
                 </div>
                 <!-- <hr> -->
                 <div id="box">
@@ -100,7 +100,7 @@ if(isset($_POST['usuario']) || isset($_POST['senha']))
                     </form>
                     
                     <div class="aviso">
-                        <p>Caso esteja tendo alguma dificuldade favor entrar em contato com pessoal da administração.</p>
+                        <p>Em caso de dificuldade, entre em contato com os Administradores.</p>
                         
                     </div>
 

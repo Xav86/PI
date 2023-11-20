@@ -22,7 +22,7 @@ include("src/extra/protect-cap.php");
         <!-- Logo -->
         <div class="container-fluid">
             <a class="navbar-brand" href="home_cap.php">
-                <img src="assets/image/saga-cedup-logo.png" alt="Logo Cedup" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="assets/image/test.png" alt="Logo Cedup" width="62" height="34" class="d-inline-block align-text-top">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -33,10 +33,10 @@ include("src/extra/protect-cap.php");
                 <ul class="nav navbar-nav nav-underline">
                     <!-- Links dos Incritos -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Incritos</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inscritos</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_inscrito.php">Cadastrar Inscritos</a></li>
-                            <li><a class="dropdown-item" href="visualiza_inscrito.php">Visualiza Inscritos</a></li>
+                            <li><a class="dropdown-item" href="visualiza_inscrito.php">Visualizar Inscritos</a></li>
 
                         </ul>
 
@@ -76,7 +76,7 @@ include("src/extra/protect-cap.php");
         if ($res){
         ?>
             <h1>você esta no menu de capitão da equipe <?php if (isset($linha['nome'])) {echo $linha['nome'];} else {echo "erro ao exibir nome da equipe X(";} ?></h1>
-            <p><i>Não a nada aqui, por enquanto...</i></p>     
+            <p><i>Não há nada aqui, <b>por enquanto...</b></i></p>     
         </div>
         <?php } ?>
     </main>

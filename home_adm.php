@@ -23,7 +23,7 @@ include("src/extra/protect-adm.php");
         <!-- Logo -->
         <div class="container-fluid">
             <a class="navbar-brand" href="home_adm.php">
-                <img src="assets/image/saga-cedup-logo.png" alt="Logo Cedup" width="35" height="29" class="d-inline-block align-text-top">
+                <img src="assets/image/test.png" alt="Logo Cedup" width="62" height="34" class="d-inline-block align-text-top">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@ include("src/extra/protect-adm.php");
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_prova.php">Cadastrar Prova</a></li>
-                            <li><a class="dropdown-item" href="visualiza_prova.php">Visualiza Prova</a></li>
+                            <li><a class="dropdown-item" href="visualiza_prova.php">Visualizar Prova</a></li>
 
                         </ul>
 
@@ -58,22 +58,22 @@ include("src/extra/protect-adm.php");
 
                     <!-- Links do Capitão -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitões</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitães</a>
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_capitao.php">Cadastrar Capitão</a></li>
-                            <li><a class="dropdown-item" href="#">Visualiza Capitão</a></li>
+                            <li><a class="dropdown-item" href="#">Visualizar Capitão</a></li>
 
                         </ul>
 
                     </li>
                     <!-- Cadastrar usuários -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">usuarios</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="form_cad_usuario.php">Cadastrar Usuários</a></li>
-                            <li><a class="dropdown-item" href="visualiza_usuario.php">Visualiza Usuários</a></li>
+                            <li><a class="dropdown-item" href="form_cad_usuario.php">Cadastrar Usuário</a></li>
+                            <li><a class="dropdown-item" href="visualiza_usuario.php">Visualizar Usuário</a></li>
 
                         </ul>
                     </li>
@@ -97,9 +97,25 @@ include("src/extra/protect-adm.php");
 
     <main>
         <div id="container">
-            <h1>você esta no menu de Adiministrador!</h1>
-            <p><i>Não a nada aqui, por enquanto...</i></p>     
+        <?php
+        include 'src/extra/connection.php';
+        if (!isset($_SESSION))
+        {
+        session_start();
+        }
+        $cod = $_SESSION["id"];
+        $sql = "SELECT * FROM usuarios where id='$cod'";
+
+        $res = mysqli_query($id,$sql);
+
+        $linha = mysqli_fetch_array($res);
+        if ($res){
+        ?>
+            <h1>Bem-vindo, <?php if (isset($linha['nome'])) {echo $linha['nome'];} else {echo "erro ao exibir seu nome";} ?>.</h1>
+            <p><h1>Você está no menu de adiministrador.</h1></p> 
+            <p><i>Não há nada aqui, <b>por enquanto...</b></i></p>     
         </div>
+        <?php } ?>
     </main>
 
 </body>

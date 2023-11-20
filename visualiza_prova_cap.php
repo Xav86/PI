@@ -17,8 +17,8 @@ include("src/extra/protect-cap.php");
 
 </head>
 <body>
-    <!-- Barra de Navegação -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <!-- Barra de Navegação -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <!-- Logo -->
         <div class="container-fluid">
             <a class="navbar-brand" href="home_cap.php">
@@ -33,10 +33,10 @@ include("src/extra/protect-cap.php");
                 <ul class="nav navbar-nav nav-underline">
                     <!-- Links dos Incritos -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Incritos</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inscritos</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_inscrito.php">Cadastrar Inscritos</a></li>
-                            <li><a class="dropdown-item" href="visualiza_inscrito.php">Visualiza Inscritos</a></li>
+                            <li><a class="dropdown-item" href="visualiza_inscrito.php">Visualizar Inscritos</a></li>
 
                         </ul>
 

@@ -17,8 +17,8 @@ include("src/extra/protect-cap.php");
 
 </head>
 <body>
-    <!-- Barra de Navegação -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <!-- Barra de Navegação -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <!-- Logo -->
         <div class="container-fluid">
             <a class="navbar-brand" href="home_cap.php">
@@ -33,10 +33,10 @@ include("src/extra/protect-cap.php");
                 <ul class="nav navbar-nav nav-underline">
                     <!-- Links dos Incritos -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Incritos</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inscritos</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_inscrito.php">Cadastrar Inscritos</a></li>
-                            <li><a class="dropdown-item" href="visualiza_inscrito.php">Visualiza Inscritos</a></li>
+                            <li><a class="dropdown-item" href="visualiza_inscrito.php">Visualizar Inscritos</a></li>
 
                         </ul>
 
@@ -66,13 +66,13 @@ include("src/extra/protect-cap.php");
                 <!-- Cabeçalho -->
                 <div id="title"> 
                     <h1>Cadastro do Aluno</h1>
-                    <p>Realize a inscrição de um aluno para <br> ele estar participando da gincana!</p>
+                    <p>Realize a inscrição de um aluno para<br>que ele participe da gincana</p>
                 </div>
                 <!-- Campos -->
                 <form action="src/cad-inscrito.php" method="post">
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Matricula" aria-label="Matricula" autocomplete="off" spellcheck="false" name="matricula">
+                            <input type="text" class="form-control" placeholder="Matrícula" aria-label="Matricula" autocomplete="off" spellcheck="false" name="matricula">
                         </div>
 
                         <div class="col">
@@ -95,7 +95,7 @@ include("src/extra/protect-cap.php");
 
                 <!-- Aviso -->
                 <div class="aviso">
-                    <p>Ao cadastrar o aluno, o mesmo estara atuomaticamente participando da equipe qual você responsavel</p>
+                    <p>O aluno será automaticamente vinculado<br>à equipe pela qual você é responsável</p>
 
                 </div>
             </div>

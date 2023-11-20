@@ -26,8 +26,8 @@ while ($linha = mysqli_fetch_array($res)) { ?>
 
 </head>
 <body>
-    <!-- Barra de Navegação -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <!-- Barra de Navegação -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <!-- Logo -->
         <div class="container-fluid">
             <a class="navbar-brand" href="home_cap.php">
@@ -42,10 +42,10 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                 <ul class="nav navbar-nav nav-underline">
                     <!-- Links dos Incritos -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Incritos</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inscritos</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_inscrito.php">Cadastrar Inscritos</a></li>
-                            <li><a class="dropdown-item" href="visualiza_inscrito.php">Visualiza Inscritos</a></li>
+                            <li><a class="dropdown-item" href="visualiza_inscrito.php">Visualizar Inscritos</a></li>
 
                         </ul>
 
@@ -75,14 +75,14 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                 <!-- Cabeçalho -->
                 <div id="title"> 
                     <h1>Cadastro do Aluno</h1>
-                    <p>Realize a inscrição de um aluno para <br> ele estar participando da gincana!</p>
+                    <p>Realize a edição dos dados de um<br>aluno participante da gincana</p>
                 </div>
                 <!-- Campos -->
                 <form action="update-inscrito.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $linha['id']; ?>">
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Matricula" aria-label="Matricula" autocomplete="off" spellcheck="false" name="matricula" value="<?php echo $linha['matricula'];  ?>">
+                            <input type="text" class="form-control" placeholder="Matrícula" aria-label="Matricula" autocomplete="off" spellcheck="false" name="matricula" value="<?php echo $linha['matricula'];  ?>">
                         </div>
 
                         <div class="col">
@@ -97,7 +97,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                     </div>
                     <!-- Botão -->
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary btn-lg" type="submit">Cadastrar</button>
+                        <button class="btn btn-primary btn-lg" type="submit">Salvar alterações</button>
                         
                     </div>
 
@@ -105,7 +105,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
 
                 <!-- Aviso -->
                 <div class="aviso">
-                    <p>Ao cadastrar o aluno, o mesmo estara atuomaticamente participando da equipe qual você responsavel</p>
+                    <p>O aluno será automaticamente vinculado<br>à equipe pela qual você é responsável</p>
 
                 </div>
             </div>

@@ -45,7 +45,7 @@ while ($linha = mysqli_fetch_array($res)) {  ?>
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_prova.php">Cadastrar Prova</a></li>
-                            <li><a class="dropdown-item" href="visualiza_prova.php">Visualiza Prova</a></li>
+                            <li><a class="dropdown-item" href="visualiza_prova.php">Visualizar Prova</a></li>
 
                         </ul>
 
@@ -65,22 +65,22 @@ while ($linha = mysqli_fetch_array($res)) {  ?>
 
                     <!-- Links do Capitão -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitões</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitães</a>
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_capitao.php">Cadastrar Capitão</a></li>
-                            <li><a class="dropdown-item" href="#">Visualiza Capitão</a></li>
+                            <li><a class="dropdown-item" href="#">Visualizar Capitão</a></li>
 
                         </ul>
 
                     </li>
                     <!-- Cadastrar usuários -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">usuarios</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="form_cad_usuario.php">Cadastrar Usuários</a></li>
-                            <li><a class="dropdown-item" href="visualiza_usuario.php">Visualiza Usuários</a></li>
+                            <li><a class="dropdown-item" href="form_cad_usuario.php">Cadastrar Usuário</a></li>
+                            <li><a class="dropdown-item" href="visualiza_usuario.php">Visualizar Usuário</a></li>
 
                         </ul>
                     </li>
@@ -110,7 +110,7 @@ while ($linha = mysqli_fetch_array($res)) {  ?>
                     <!-- Cabeçalho -->
                     <div id="title">
                         <h1>Cadastro de Usuários</h1>
-                        <p>Cadastre um usuário e selecione o seu nivel de acesso dentro do sistema.</p>
+                        <p>Edite as credenciais de um usuário, e selecione<br>seu nível de acesso dentro do sistema</p>
 
                     </div>
 
@@ -158,7 +158,7 @@ while ($linha = mysqli_fetch_array($res)) {  ?>
 
                     <!-- Botão -->
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary btn-lg" type="submit">Button</button>
+                        <button class="btn btn-primary btn-lg" type="submit">Salvar alterações</button>
 
                     </div> 
                      

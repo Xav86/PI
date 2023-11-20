@@ -37,7 +37,7 @@ include("src/extra/protect-adm.php");
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_prova.php">Cadastrar Prova</a></li>
-                            <li><a class="dropdown-item" href="visualiza_prova.php">Visualiza Prova</a></li>
+                            <li><a class="dropdown-item" href="visualiza_prova.php">Visualizar Prova</a></li>
 
                         </ul>
 
@@ -57,22 +57,22 @@ include("src/extra/protect-adm.php");
 
                     <!-- Links do Capitão -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitões</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitães</a>
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form_cad_capitao.php">Cadastrar Capitão</a></li>
-                            <li><a class="dropdown-item" href="#">Visualiza Capitão</a></li>
+                            <li><a class="dropdown-item" href="#">Visualizar Capitão</a></li>
 
                         </ul>
 
                     </li>
                     <!-- Cadastrar usuários -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">usuarios</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="form_cad_usuario.php">Cadastrar Usuários</a></li>
-                            <li><a class="dropdown-item" href="visualiza_usuario.php">Visualiza Usuários</a></li>
+                            <li><a class="dropdown-item" href="form_cad_usuario.php">Cadastrar Usuário</a></li>
+                            <li><a class="dropdown-item" href="visualiza_usuario.php">Visualizar Usuário</a></li>
 
                         </ul>
                     </li>
@@ -100,7 +100,7 @@ include("src/extra/protect-adm.php");
                 <!-- Cabeçalho -->
                 <div id="title">
                     <h1>Cadastro de Provas</h1>
-                    <p>Faça aqui o cadastro em relação as provas que irão acontecer durante a gincana e pontos que os colocados receberão</p>
+                    <p>Faça aqui o cadastro em relação as provas que irão acontecer<br>durante a gincana e pontos que os colocados receberão</p>
                 </div>
                 <!-- Campos -->
                 <form action="src/cad-prova.php" method="post">
@@ -129,7 +129,7 @@ include("src/extra/protect-adm.php");
                         </div>
 
                         <div class="col">
-                            <label>Pontos de Participação</label>
+                            <label>Pontos de participação</label>
                             <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="padrao" autocomplete="off" spellcheck="false" required>
                         </div>
 
