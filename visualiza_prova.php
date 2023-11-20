@@ -102,14 +102,17 @@ include("src/extra/protect-adm.php");
                         <tr>
                             <th scope="col">N° da prova</th>
                             <th scope="col">Nome</th>
-                            <th scope="col" >Ponto 1</th>
-                            <th scope="col" >Ponto 2</th>
-                            <th scope="col" >Ponto 3</th>
-                            <th scope="col" >Ponto padrão</th>
-                            <th scope="col" >Descrição</th>
-                            <th scope="col" >Editar</th>
-                            <th scope="col" >Excluir</th>
+                            <th scope="col">Ponto 1</th>
+                            <th scope="col">Ponto 2</th>
+                            <th scope="col">Ponto 3</th>
+                            <th scope="col">Ponto 4</th>
+                            <th scope="col">Ponto 5</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Excluir</th>
+
                         </tr>
+
                     </thead>
                     <?php
                     include("src/extra/connection.php");
@@ -132,7 +135,9 @@ include("src/extra/protect-adm.php");
 
                             <td><?php echo $linha['terceiro']; ?></td>
 
-                            <td><?php echo $linha['ponto_padrao']; ?></td>
+                            <td><?php echo $linha['quarto']; ?></td>
+
+                            <td><?php echo $linha['quinto']; ?></td>
 
                             <td><?php echo $linha['descricao']; ?></td>
 

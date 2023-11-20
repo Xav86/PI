@@ -7,7 +7,8 @@ $numero = $_POST['numero'];
 $ponto1 = $_POST['ponto1'];
 $ponto2 = $_POST['ponto2'];
 $ponto3 = $_POST['ponto3'];
-$padrao = $_POST['padrao'];
+$ponto4 = $_POST['ponto4'];
+$ponto5 = $_POST['ponto5'];
 $nome = $_POST['nome'];
 $desc = $_POST['descricao'];
 
@@ -21,7 +22,7 @@ if ($resultado) {
     $row = mysqli_fetch_assoc($resultado);
     $cod = $row['pontuacao_id'];
 
-    $sql2 = "UPDATE pontuacao SET primeiro = '$ponto1', segundo = '$ponto2', terceiro = '$ponto3', ponto_padrao = '$padrao' WHERE id='$cod'";
+    $sql2 = "UPDATE pontuacao SET primeiro = '$ponto1', segundo = '$ponto2', terceiro = '$ponto3', quarto = '$ponto4', quinto = '$ponto5' WHERE id='$cod'";
     $res2 = mysqli_query($id, $sql2);
 
 } else {

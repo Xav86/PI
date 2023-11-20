@@ -97,7 +97,12 @@ include("src/extra/protect-adm.php");
     <main>
         <div id="container">
             <div id="box">
-                <h1>alow</h1>
+                <div id="title">
+                    <h1>Pontuação das Equipes</h1>
+                    <p>Digite aqui o numero da prova e qual colocação que as equipes ficaram</p>
+                    
+                </div>
+             
             </div>
 
         </div>

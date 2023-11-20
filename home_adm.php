@@ -103,7 +103,7 @@ include("src/extra/protect-adm.php");
         {
         session_start();
         }
-        $cod = $_SESSION["id"];
+        $cod = $_SESSION['id'];
         $sql = "SELECT * FROM usuarios where id='$cod'";
 
         $res = mysqli_query($id,$sql);

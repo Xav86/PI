@@ -67,7 +67,7 @@ include("src/extra/protect-cap.php");
         {
         session_start();
         }
-        $cod = $_SESSION["id"];
+        $cod = $_SESSION['id'];
         $sql = "SELECT * FROM equipes where usuarios_id='$cod'";
 
         $res = mysqli_query($id,$sql);

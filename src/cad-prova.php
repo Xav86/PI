@@ -7,11 +7,12 @@ $numero = $_POST['numero'];
 $ponto1 = $_POST['ponto1'];
 $ponto2 = $_POST['ponto2'];
 $ponto3 = $_POST['ponto3'];
-$padrao = $_POST['padrao'];
+$ponto4 = $_POST['ponto4'];
+$ponto5 = $_POST['ponto5'];
 $nome = $_POST['nome'];
 $desc = $_POST['descricao'];
 
-$sql = "INSERT INTO pontuacao (primeiro,segundo,terceiro,ponto_padrao) values ('$ponto1','$ponto2','$ponto3','$padrao')";
+$sql = "INSERT INTO pontuacao (primeiro,segundo,terceiro,quarto,quinto) values ('$ponto1','$ponto2','$ponto3','$ponto4','$ponto5')";
 
 $res = mysqli_query($id, $sql);
 

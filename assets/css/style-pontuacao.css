@@ -26,3 +26,9 @@
     border: 3px solid black;
     border-radius: 20px;
 }
+
+/* Titulo */
+#title
+{
+    text-align: center;
+}

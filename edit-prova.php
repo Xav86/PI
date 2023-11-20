@@ -138,8 +138,13 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                         </div>
 
                         <div class="col">
-                            <label>Pontos de Participação</label>
-                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="padrao" autocomplete="off" spellcheck="false" required value="<?php echo $linha['ponto_padrao'];  ?>">
+                            <label>quarto lugar</label>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto4" autocomplete="off" spellcheck="false" required value="<?php echo $linha['quarto'];  ?>">
+                        </div>
+
+                        <div class="col">
+                            <label>quinto lugar</label>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto5" autocomplete="off" spellcheck="false" required value="<?php echo $linha['quinto'];  ?>">
                         </div>
 
                     </div>
@@ -152,8 +157,8 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                         </div>
                         
                         <div class="form-floating">
-                            <textarea class="form-control" placeholder="Escreve a Descrição aqui" id="floatingTextarea2" style="height: 100px" name="descricao" autocomplete="off" spellcheck="false"><?php echo $linha['descricao'];  ?></textarea>
-                            <label for="floatingTextarea2"  <?php } ?>>Descrição</label>
+                            <textarea class="form-control" placeholder="Escreve a Descrição aqui" id="floatingTextarea2" style="height: 100px" name="descricao" autocomplete="off" spellcheck="false"><?php echo $linha['descricao']; }?></textarea>
+                            <label for="floatingTextarea2">Descrição</label>
 
                         </div>
                         

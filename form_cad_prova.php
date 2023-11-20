@@ -129,8 +129,13 @@ include("src/extra/protect-adm.php");
                         </div>
 
                         <div class="col">
-                            <label>Pontos de participação</label>
-                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="padrao" autocomplete="off" spellcheck="false" required>
+                            <label>quarto lugar</label>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto4" autocomplete="off" spellcheck="false" required>
+                        </div>
+
+                        <div class="col">
+                            <label>quinto lugar</label>
+                            <input type="text" class="form-control" placeholder="Pontuação" aria-label="PontuacaodaProva" name="ponto5" autocomplete="off" spellcheck="false" required>
                         </div>
 
                     </div>
