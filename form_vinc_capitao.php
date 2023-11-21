@@ -9,9 +9,9 @@ include("src/extra/protect-adm.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="assets/css/style-cadastro-equipe.css">
+    <link rel="stylesheet" href="assets/css/style-cadastro-capitao.css">
     <link rel="shortcut icon" href="assets/image/fivicon.png" type="image/x-icon">
-    <title>Cadastro de Equipes</title>
+    <title>Cadastro de Capitões</title>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
@@ -92,43 +92,78 @@ include("src/extra/protect-adm.php");
 
         </div>
 
-    </nav>  
-
+    </nav>   
+      
     <main>
         <!-- Caixa de Centralizar -->
         <div id="container">
             <div id="box">
-                <div id="title-box">
-                    <!-- Cabeçalho -->
-                    <div id="title">
-                        <h1>Cadastro de Equipes</h1>
-                        <p>Ao preencher o campos abaixo, será<br>cadastrada uma nova equipe</p>
-
-                    </div>
-
+                <!-- Cabeçalho -->
+                <div id="title">
+                    <h1>Cadastro de Capitães</h1>
+                    <p>Selecione um capitão e vinclue-o a ume equipe</p>
+                    
                 </div>
 
                 <!-- Inserir dados -->
-                <form action="src/cad-equipe.php" method="post">
-                    <!-- Nome da Equipe -->
-                    <div class="form-floating mb-3">
-                        <input class="form-control" id="floatingInput" placeholder="Nome da Equipe" name="nome" required autocomplete="off" spellcheck="false">
-                        <label for="floatingInput">Nome da Equipe</label>
+                <form action="src/cad-capitao.php" method="post">  
+                    <!-- Nome do capitão -->  
 
-                    </div>
-                    
+                    <!-- Escolher uma equipe -->
+                    <div id="campos">
+
+                        <label>Escolha a equipe para o Capitão</label>
+                            
+                        <select class="form-select" aria-label="Default select example" name="equipe" required>
+                            <option selected></option>
+                            <?php
+                            include("src/extra/connection.php");
+
+                            $sql = ('SELECT * FROM equipes');
+                            $res = mysqli_query($id, $sql);
+
+                            while ($linha = mysqli_fetch_array($res)) { 
+                                
+                            if (($linha['status'] == 'ativo') && $linha['usuarios_id'] == ''){ ?>
+
+                            <option><?php echo $linha['nome'];?></option>
+                            <?php } } ?>
+                        </select>
+                        
+                        <label>Escolha um capitão para a Equipe</label>
+
+                        <select class="form-select" aria-label="Default select example" name="capitao" required>
+                            <option selected></option>
+                            <?php 
+
+                            $sql2 = ("SELECT * FROM usuarios where nivel='cap'");
+                            $res2 = mysqli_query($id, $sql2);
+                            $linha = mysqli_fetch_array($res);
+                            
+
+                            while ($linha2 = mysqli_fetch_array($res2)) {
+                            if (($linha2["status"] == "ativo")){ ?>
+                            
+                            <option><?php echo $linha2['nome']; ?></option>
+
+                            <?php } } ?>
+
+                        </select>
+                    </div> 
+
                     <!-- Botão -->
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary btn-lg" type="submit">Cadastrar</button>
+                    <button class="btn btn-primary btn-lg" type="submit">Salvar</button>
+                    
+                    </div>
 
-                    </div> 
-                     
                 </form>
+                    
 
             </div>
 
-        </div>           
-
+        </div>
+          
     </main>
 
 </body>

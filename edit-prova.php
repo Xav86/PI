@@ -30,7 +30,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
         <!-- Logo -->
         <div class="container-fluid">
             <a class="navbar-brand" href="home_adm.php">
-                <img src="assets/image/saga-cedup-logo.png" alt="Logo Cedup" width="35" height="29" class="d-inline-block align-text-top">
+                <img src="assets/image/saga-cedup-logo-oficial.png" alt="Logo Cedup" width="50" height="50" class="d-inline-block align-text-top">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -65,11 +65,11 @@ while ($linha = mysqli_fetch_array($res)) { ?>
 
                     <!-- Links do Capitão -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Capitães</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vinculo</a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="form_cad_capitao.php">Cadastrar Capitão</a></li>
-                            <li><a class="dropdown-item" href="#">Visualizar Capitão</a></li>
+                            <li><a class="dropdown-item" href="form_vinc_capitao.php">Vincular Capitão</a></li>
+                            <li><a class="dropdown-item" href="visualiza_vinculo.php">Visualizar Capitão</a></li>
 
                         </ul>
 
@@ -100,7 +100,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
 
         </div>
 
-    </nav> 
+    </nav>  
 
     <main>
         <div id="container">
