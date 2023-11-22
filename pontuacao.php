@@ -114,7 +114,7 @@ include("src/extra/protect-adm.php");
                         ?>
                         
                         <label for="nprova">Selecione o Número da prova</label>
-                        <select id="nprova" class="form-select" aria-label="Default select example">
+                        <select id="nprova" class="form-select" aria-label="Default select example" name="numero_prova">
                             <option></option>
                             <?php while ($linha = mysqli_fetch_array($res)){
                             if ($linha['status'] == 'ativo'){    
@@ -132,7 +132,7 @@ include("src/extra/protect-adm.php");
 
                     <div class="campos">
                         <label for="nprova">Selecione o Primeiro Colocado</label>
-                        <select id="nprova" class="form-select" aria-label="Default select example">
+                        <select id="nprova" class="form-select" aria-label="Default select example" name="primeiro">
                             <option></option>
                             <?php while ($linha2 = mysqli_fetch_array($res2)){?>
                             <option><?php echo $linha2['nome']; }?></option>
@@ -145,7 +145,7 @@ include("src/extra/protect-adm.php");
                     
                     <div class="campos">
                         <label for="nprova">Selecione o Segundo Colocado</label>
-                        <select id="nprova" class="form-select" aria-label="Default select example">
+                        <select id="nprova" class="form-select" aria-label="Default select example" name="segundo">
                             <option></option>
                             <?php while ($linha2 = mysqli_fetch_array($res2)){?>
                             <option><?php echo $linha2['nome']; } ?></option>
@@ -158,7 +158,7 @@ include("src/extra/protect-adm.php");
 
                     <div class="campos">
                         <label for="nprova">Selecione o Terceiro Colocado</label>
-                        <select id="nprova" class="form-select" aria-label="Default select example">
+                        <select id="nprova" class="form-select" aria-label="Default select example" name="terceiro">
                             <option></option>
                             <?php while ($linha2 = mysqli_fetch_array($res2)){?>
                             <option><?php echo $linha2['nome']; } ?></option>
@@ -171,7 +171,7 @@ include("src/extra/protect-adm.php");
 
                     <div class="campos">
                         <label for="nprova">Selecione o Quarto Colocado</label>
-                        <select id="nprova" class="form-select" aria-label="Default select example">
+                        <select id="nprova" class="form-select" aria-label="Default select example" name="quarto">
                             <option></option>
                             <?php while ($linha2 = mysqli_fetch_array($res2)){?>
                             <option><?php echo $linha2['nome']; } ?></option>
@@ -184,13 +184,17 @@ include("src/extra/protect-adm.php");
 
                     <div class="campos">
                         <label for="nprova">Selecione o Quinto Colocado</label>
-                        <select id="nprova" class="form-select" aria-label="Default select example">
+                        <select id="nprova" class="form-select" aria-label="Default select example" name="quinto">
                             <option></option>
                             <?php while ($linha2 = mysqli_fetch_array($res2)){?>
                             <option><?php echo $linha2['nome']; } ?></option>
                         
                         </select>
                         
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary btn-lg" type="button">Button</button>
                     </div>
                     
                 </form>
