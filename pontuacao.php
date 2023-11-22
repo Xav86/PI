@@ -102,11 +102,103 @@ include("src/extra/protect-adm.php");
                     <p>Digite aqui o numero da prova e qual colocação que as equipes ficaram</p>
                     
                 </div>
-             
+
+                <form action="" method="post">
+                    <div class="numero-prova">
+                        <?php
+                        include 'src/extra/connection.php';
+                        
+                        $sql = "SELECT * FROM provas ORDER BY numero_prova ASC";
+                        $res = mysqli_query($id, $sql);
+
+                        ?>
+                        
+                        <label for="nprova">Selecione o Número da prova</label>
+                        <select id="nprova" class="form-select" aria-label="Default select example">
+                            <option></option>
+                            <?php while ($linha = mysqli_fetch_array($res)){
+                            if ($linha['status'] == 'ativo'){    
+                            ?>
+                            <option><?php echo $linha['numero_prova']; } } ?></option>                            
+                        </select> 
+
+                    </div>
+
+                    <?php
+                    $sql = "SELECT * FROM equipes";
+                    $res2 = mysqli_query($id, $sql);
+                    
+                    ?>
+
+                    <div class="campos">
+                        <label for="nprova">Selecione o Primeiro Colocado</label>
+                        <select id="nprova" class="form-select" aria-label="Default select example">
+                            <option></option>
+                            <?php while ($linha2 = mysqli_fetch_array($res2)){?>
+                            <option><?php echo $linha2['nome']; }?></option>
+                            
+                        </select> 
+
+                    </div>
+
+                    <?php $res2 = mysqli_query($id, $sql); ?>
+                    
+                    <div class="campos">
+                        <label for="nprova">Selecione o Segundo Colocado</label>
+                        <select id="nprova" class="form-select" aria-label="Default select example">
+                            <option></option>
+                            <?php while ($linha2 = mysqli_fetch_array($res2)){?>
+                            <option><?php echo $linha2['nome']; } ?></option>
+                            
+                        </select> 
+
+                    </div>
+
+                    <?php $res2 = mysqli_query($id, $sql); ?>
+
+                    <div class="campos">
+                        <label for="nprova">Selecione o Terceiro Colocado</label>
+                        <select id="nprova" class="form-select" aria-label="Default select example">
+                            <option></option>
+                            <?php while ($linha2 = mysqli_fetch_array($res2)){?>
+                            <option><?php echo $linha2['nome']; } ?></option>
+                        
+                        </select>
+                        
+                    </div>
+
+                    <?php $res2 = mysqli_query($id, $sql); ?>
+
+                    <div class="campos">
+                        <label for="nprova">Selecione o Quarto Colocado</label>
+                        <select id="nprova" class="form-select" aria-label="Default select example">
+                            <option></option>
+                            <?php while ($linha2 = mysqli_fetch_array($res2)){?>
+                            <option><?php echo $linha2['nome']; } ?></option>
+                        
+                        </select>
+                        
+                    </div>
+
+                    <?php $res2 = mysqli_query($id, $sql); ?>
+
+                    <div class="campos">
+                        <label for="nprova">Selecione o Quinto Colocado</label>
+                        <select id="nprova" class="form-select" aria-label="Default select example">
+                            <option></option>
+                            <?php while ($linha2 = mysqli_fetch_array($res2)){?>
+                            <option><?php echo $linha2['nome']; } ?></option>
+                        
+                        </select>
+                        
+                    </div>
+                    
+                </form>
+
             </div>
-
+            
         </div>
-
+        
     </main>
 
 </body>
