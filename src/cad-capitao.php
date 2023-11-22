@@ -41,7 +41,7 @@ if (($res) && ($res2)) { ?>
 
     <script>
         setTimeout(function() {
-            window.location.href = "../form_cad_capitao.php"; 
+            window.location.href = "../form_vinc_capitao.php"; 
         }, 2000); 
     </script>
 </body>

@@ -31,7 +31,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
         <!-- Logo -->
         <div class="container-fluid">
             <a class="navbar-brand" href="home_cap.php">
-                <img src="assets/image/saga-cedup-logo.png" alt="Logo Cedup" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="assets/image/logonav.png" alt="Logo Cedup" width="58" height="28" class="d-inline-block align-text-top">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

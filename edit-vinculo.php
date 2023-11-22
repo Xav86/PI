@@ -1,5 +1,5 @@
 <?php 
-include("src/extra/protect-adm.php");
+include("src/extra/protect-adm.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ include("src/extra/protect-adm.php");
         <!-- Logo -->
         <div class="container-fluid">
             <a class="navbar-brand" href="home_adm.php">
-                <img src="assets/image/saga-cedup-logo-oficial.png" alt="Logo Cedup" width="50" height="50" class="d-inline-block align-text-top">
+                <img src="assets/image/logonav.png" alt="Logo Cedup" width="58" height="28" class="d-inline-block align-text-top">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -106,11 +106,21 @@ include("src/extra/protect-adm.php");
                 </div>
 
                 <!-- Inserir dados -->
-                <form action="#" method="post">  
+                <form action="update-vinculo.php" method="post">  
                     <!-- Nome do capitão -->  
 
                     <!-- Escolher uma equipe -->
-                    <input type="hidden" name="id" value="<?php echo $linha['id']; ?>">
+                    <?php 
+                    include("src/extra/connection.php");
+
+                    $pk = $_GET['id'];
+
+                    $sql = ("SELECT * FROM equipes where id='$pk'");
+                    $result = mysqli_query($id, $sql);
+                    $cod = mysqli_fetch_array($result);
+
+                    ?>
+                    <input type="hidden" name="id" value="<?php echo $cod['id']; ?>">
                     <div id="campos">
 
                         <label>Escolha a equipe para o Capitão</label>
@@ -118,7 +128,6 @@ include("src/extra/protect-adm.php");
                         <select class="form-select" aria-label="Default select example" name="equipe" required>
                             <option selected></option>
                             <?php
-                            include("src/extra/connection.php");
 
                             $sql = ('SELECT * FROM equipes');
                             $res = mysqli_query($id, $sql);
@@ -139,9 +148,7 @@ include("src/extra/protect-adm.php");
 
                             $sql2 = ("SELECT * FROM usuarios where nivel='cap'");
                             $res2 = mysqli_query($id, $sql2);
-                            $linha = mysqli_fetch_array($res);
-                            
-
+                              
                             while ($linha2 = mysqli_fetch_array($res2)) {
                             if (($linha2["status"] == "ativo")){ ?>
                             
@@ -150,7 +157,7 @@ include("src/extra/protect-adm.php");
                             <?php } } ?>
 
                         </select>
-                    </div> 
+                    </div>
 
                     <!-- Botão -->
                     <div class="d-grid gap-2">

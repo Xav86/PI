@@ -63,6 +63,6 @@ if (($res) && ($res2)) { ?>
 } 
 else 
 {
-    echo "Erro ao excluir o registro do banco de dados";
+    echo "Erro ao atualizar o registro do banco de dados";
 }
 ?>
