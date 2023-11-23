@@ -113,7 +113,8 @@ include("src/extra/protect-adm.php");
         ?>
             <h1>Bem-vindo, <?php if (isset($linha['nome'])) {echo $linha['nome'];} else {echo "erro ao exibir seu nome";} ?>.</h1>
             <p><h1>Você está no menu de adiministrador.</h1></p> 
-            <p><i>Não há nada aqui, <b>por enquanto...</b></i></p>     
+            <p><i>Não há nada aqui, <b>por enquanto...</b></i></p>  
+            <p><a href="placar.php">ir pra la</a></p>   
         </div>
         <?php } ?>
     </main>
