@@ -75,7 +75,7 @@ include("src/extra/protect-cap.php");
         $linha = mysqli_fetch_array($res);
         if ($res){
         ?>
-            <h1>você esta no menu de capitão da equipe <?php if (isset($linha['nome'])) {echo $linha['nome'];} else {echo "erro ao exibir nome da equipe X(";} ?></h1>
+            <h1>você esta no menu de capitão da equipe <br> <?php if (isset($linha['nome'])) {echo $linha['nome'];} else {echo "erro ao exibir nome da equipe X(";} ?></h1>
 
         </div>
         

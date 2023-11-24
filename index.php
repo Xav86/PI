@@ -44,8 +44,16 @@ if(isset($_POST['usuario']) || isset($_POST['senha']))
                 header("location: home_adm.php");
    
             }
-//        } else { echo'Falha ao logar! usuario ou senha incorretos, ou usuário não esta ativo'; }
-        }            
+//       } else { echo'Falha ao logar! usuario ou senha incorretos, ou usuário não esta ativo'; }
+             
+        }else{
+            $script = 
+                '<script>'.
+                    'function aviso() {alert("Falha ao logar! usuario ou senha incorretos, ou usuário não esta ativo");}'.
+                '</script>';
+            echo $script;
+        }
+
     }
     
 }

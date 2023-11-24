@@ -71,7 +71,7 @@ include("src/extra/protect-cap.php");
                             <th scope="col">Ponto 2</th>
                             <th scope="col">Ponto 3</th>
                             <th scope="col">Ponto 4</th>
-                            <th scope="col">Ponto 5</th>
+                            <th style="width: 100px; text-align: center;" scope="col">Ponto 5</th>
                             <th scope="col">Descrição</th>
 
                         </tr>
