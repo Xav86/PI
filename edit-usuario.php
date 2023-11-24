@@ -30,7 +30,7 @@ while ($linha = mysqli_fetch_array($res)) {  ?>
         <!-- Logo -->
         <div class="container-fluid">
             <a class="navbar-brand" href="home_adm.php">
-                <img src="assets/image/logonav.png" alt="Logo Cedup" width="58" height="28" class="d-inline-block align-text-top"> 
+                <img src="assets/image/logonav.png" alt="Logo Cedup" width="58" height="28" class="d-inline-block align-text-top">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -85,8 +85,14 @@ while ($linha = mysqli_fetch_array($res)) {  ?>
                         </ul>
                     </li>
                     <!-- Controle de pontuação -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="pontuacao.php">Pontuação</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pontuação</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pontuacao.php">Cadastrar Pontuação</a></li>
+                            <li><a class="dropdown-item" href="edit-pontuacao.php">Alterar Pontuação</a></li>
+
+                        </ul>
                     </li>
 
                     <!-- Deslogar -->
@@ -100,7 +106,7 @@ while ($linha = mysqli_fetch_array($res)) {  ?>
 
         </div>
 
-    </nav>  
+    </nav>   
     
     <main>
         <!-- Caixa de Centralizar -->

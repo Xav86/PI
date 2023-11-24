@@ -127,7 +127,7 @@ include("src/extra/protect-adm.php");
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col" class="posicao">Posição</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Pontuação</th>
 

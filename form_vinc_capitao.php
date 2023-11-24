@@ -22,7 +22,7 @@ include("src/extra/protect-adm.php");
         <!-- Logo -->
         <div class="container-fluid">
             <a class="navbar-brand" href="home_adm.php">
-            <img src="assets/image/logonav.png" alt="Logo Cedup" width="58" height="28" class="d-inline-block align-text-top">
+                <img src="assets/image/logonav.png" alt="Logo Cedup" width="58" height="28" class="d-inline-block align-text-top">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -77,8 +77,14 @@ include("src/extra/protect-adm.php");
                         </ul>
                     </li>
                     <!-- Controle de pontuação -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="pontuacao.php">Pontuação</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pontuação</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pontuacao.php">Cadastrar Pontuação</a></li>
+                            <li><a class="dropdown-item" href="edit-pontuacao.php">Alterar Pontuação</a></li>
+
+                        </ul>
                     </li>
 
                     <!-- Deslogar -->
@@ -101,7 +107,7 @@ include("src/extra/protect-adm.php");
                 <!-- Cabeçalho -->
                 <div id="title">
                     <h1>Cadastro de Capitães</h1>
-                    <p>Selecione um capitão e vinclue-o a ume equipe</p>
+                    <p>Selecione uma equipe e um usuário para tornalo(a) <br> capitão desta equipe</p>
                     
                 </div>
 
@@ -153,7 +159,7 @@ include("src/extra/protect-adm.php");
 
                     <!-- Botão -->
                     <div class="d-grid gap-2">
-                    <button class="btn btn-primary btn-lg" type="submit">Salvar</button>
+                    <button class="btn btn-primary btn-lg" type="submit">Vincular</button>
                     
                     </div>
 

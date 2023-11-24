@@ -69,7 +69,8 @@ if (($res1) && ($res2) && ($res3) && ($res4) && ($res5)) { ?>
     <script>
         setTimeout(function() {
             window.location.href = "home_adm.php"; 
-        }, 22000); 
+        }, 
+2000); 
     </script>
 </body>
 </html>

@@ -35,6 +35,11 @@
 }
 
 /* Campos */
+label
+{
+    font-weight: 500;
+}
+
 .row
 {
     padding: 10px;

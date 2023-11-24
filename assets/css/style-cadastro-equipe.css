@@ -53,6 +53,11 @@
 }
 
 /* nome da equipe */
+label
+{
+    font-weight: 500;
+}
+
 .form-floating
 {
     margin: 0 20px;

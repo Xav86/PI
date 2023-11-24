@@ -85,8 +85,14 @@ while ($linha = mysqli_fetch_array($res)) { ?>
                         </ul>
                     </li>
                     <!-- Controle de pontuação -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="pontuacao.php">Pontuação</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pontuação</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pontuacao.php">Cadastrar Pontuação</a></li>
+                            <li><a class="dropdown-item" href="edit-pontuacao.php">Alterar Pontuação</a></li>
+
+                        </ul>
                     </li>
 
                     <!-- Deslogar -->
@@ -100,7 +106,7 @@ while ($linha = mysqli_fetch_array($res)) { ?>
 
         </div>
 
-    </nav>  
+    </nav>   
 
     <main>
         <div id="container">

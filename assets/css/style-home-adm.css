@@ -13,8 +13,13 @@
 
 .dropdown-toggle, .nav-link
 {
-    font-weight: 900;
+    font-weight: 700;
     color: black;
+}
+
+.posicao
+{
+    width: 2%;
 }
 
 #container

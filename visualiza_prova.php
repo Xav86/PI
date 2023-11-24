@@ -77,8 +77,14 @@ include("src/extra/protect-adm.php");
                         </ul>
                     </li>
                     <!-- Controle de pontuação -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="pontuacao.php">Pontuação</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pontuação</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pontuacao.php">Cadastrar Pontuação</a></li>
+                            <li><a class="dropdown-item" href="edit-pontuacao.php">Alterar Pontuação</a></li>
+
+                        </ul>
                     </li>
 
                     <!-- Deslogar -->
@@ -92,7 +98,7 @@ include("src/extra/protect-adm.php");
 
         </div>
 
-    </nav>  
+    </nav>   
  
     <main>
             <div id="tabela">
@@ -100,13 +106,13 @@ include("src/extra/protect-adm.php");
                 <table class="table table-striped table-hover table-bordered">
                     <thead>
                         <tr>
-                            <th scope="col">N° da prova</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Ponto 1</th>
-                            <th scope="col">Ponto 2</th>
-                            <th scope="col">Ponto 3</th>
-                            <th scope="col">Ponto 4</th>
-                            <th scope="col">Ponto 5</th>
+                            <th class="tamanho" scope="col">N° da prova</th>
+                            <th class="tamanho" scope="col">Nome</th>
+                            <th class="tamanho" scope="col">Ponto 1</th>
+                            <th class="tamanho" scope="col">Ponto 2</th>
+                            <th class="tamanho" scope="col">Ponto 3</th>
+                            <th class="tamanho" scope="col">Ponto 4</th>
+                            <th class="tamanho" scope="col">Ponto 5</th>
                             <th scope="col">Descrição</th>
                             <th scope="col">Editar</th>
                             <th scope="col">Excluir</th>
@@ -125,19 +131,19 @@ include("src/extra/protect-adm.php");
                         if ($linha['status'] == 'ativo') {
                         ?>
                         <tr>
-                            <td><?php echo $linha['numero_prova']; ?></td>
+                            <td class="tamanho"><?php echo $linha['numero_prova']; ?></td>
 
-                            <td><?php echo $linha['nome']; ?></td>
+                            <td class="tamanho"><?php echo $linha['nome']; ?></td>
 
-                            <td><?php echo $linha['primeiro']; ?></td>
+                            <td class="tamanho"><?php echo $linha['primeiro']; ?></td>
 
-                            <td><?php echo $linha['segundo']; ?></td>
+                            <td class="tamanho"><?php echo $linha['segundo']; ?></td>
 
-                            <td><?php echo $linha['terceiro']; ?></td>
+                            <td class="tamanho"><?php echo $linha['terceiro']; ?></td>
 
-                            <td><?php echo $linha['quarto']; ?></td>
+                            <td class="tamanho"><?php echo $linha['quarto']; ?></td>
 
-                            <td><?php echo $linha['quinto']; ?></td>
+                            <td class="tamanho"><?php echo $linha['quinto']; ?></td>
 
                             <td><?php echo $linha['descricao']; ?></td>
 

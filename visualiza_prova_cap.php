@@ -65,13 +65,13 @@ include("src/extra/protect-cap.php");
                 <table class="table table-striped table-bordered">
                 <thead>
                         <tr>
-                            <th scope="col">N° da prova</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Ponto 1</th>
-                            <th scope="col">Ponto 2</th>
-                            <th scope="col">Ponto 3</th>
-                            <th scope="col">Ponto 4</th>
-                            <th style="width: 100px; text-align: center;" scope="col">Ponto 5</th>
+                            <th class="tamanho" scope="col">N° da prova</th>
+                            <th class="tamanho" scope="col">Nome</th>
+                            <th class="tamanho" scope="col">Ponto 1</th>
+                            <th class="tamanho" scope="col">Ponto 2</th>
+                            <th class="tamanho" scope="col">Ponto 3</th>
+                            <th class="tamanho" scope="col">Ponto 4</th>
+                            <th class="tamanho" scope="col">Ponto 5</th>
                             <th scope="col">Descrição</th>
 
                         </tr>
@@ -88,19 +88,19 @@ include("src/extra/protect-cap.php");
                         if ($linha['status'] == 'ativo') {
                         ?>
                         <tr>
-                            <td><?php echo $linha['numero_prova']; ?></td>
+                            <td class="tamanho"><?php echo $linha['numero_prova']; ?></td>
 
-                            <td><?php echo $linha['nome']; ?></td>
+                            <td class="tamanho"><?php echo $linha['nome']; ?></td>
 
-                            <td><?php echo $linha['primeiro']; ?></td>
+                            <td class="tamanho"><?php echo $linha['primeiro']; ?></td>
 
-                            <td><?php echo $linha['segundo']; ?></td>
+                            <td class="tamanho"><?php echo $linha['segundo']; ?></td>
 
-                            <td><?php echo $linha['terceiro']; ?></td>
+                            <td class="tamanho"><?php echo $linha['terceiro']; ?></td>
 
-                            <td><?php echo $linha['quarto']; ?></td>
+                            <td class="tamanho"><?php echo $linha['quarto']; ?></td>
 
-                            <td><?php echo $linha['quinto']; ?></td>
+                            <td class="tamanho"><?php echo $linha['quinto']; ?></td>
 
                             <td><?php echo $linha['descricao']; ?></td>
 

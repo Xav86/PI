@@ -72,17 +72,20 @@ include("src/extra/protect-cap.php");
                 <form action="src/cad-inscrito.php" method="post">
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Matrícula" aria-label="Matricula" autocomplete="off" spellcheck="false" name="matricula">
+                            <label for="matricula">Matricula do aluno</label>
+                            <input type="text" class="form-control" placeholder="Matrícula" id=" matricula" aria-label="Matricula" autocomplete="off" spellcheck="false" name="matricula">
                         </div>
 
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Turma" aria-label="Turma" autocomplete="off" spellcheck="false" name="turma">
+                            <label for="turma">Turma do aluno</label>
+                            <input type="text" class="form-control" placeholder="Turma" aria-label="Turma" id="turma" autocomplete="off" spellcheck="false" name="turma">
                         </div>
 
                     </div>
                     
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome do Aluno" autocomplete="off" spellcheck="false" name="nome">
+                        <label for="nome">Nome do aluno</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome do Aluno" id="nome" autocomplete="off" spellcheck="false" name="nome">
 
                     </div>
                     <!-- Botão -->
