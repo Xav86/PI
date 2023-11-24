@@ -97,7 +97,7 @@ include("src/extra/protect-adm.php");
     <main>
             <div id="tabela">
 
-                <table class="table">
+                <table class="table table-striped table-hover table-bordered">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -128,7 +128,13 @@ include("src/extra/protect-adm.php");
 
                             <td><?php echo $linha['usuario']; ?></td>
 
-                            <td><?php echo $linha['nivel']; ?></td>
+                            <td><?php 
+                            if ($linha['nivel'] == 'cap'){
+                                echo "capitão";
+                            } else if ($linha['nivel'] == 'adm'){
+                                echo "administrador";
+                            }
+                            ?></td>
 
                             <td><a class="btn btn-warning" href="edit-usuario.php?id=<?php echo $linha['id']; ?>">Alterar</a></td>
                             <td><a class="btn btn-danger" href="src/deleta-usuario.php?id=<?php echo $linha['id']; ?>">Excluir</a></td>

@@ -98,13 +98,13 @@ include("src/extra/protect-adm.php");
         <div id="container">
             <div id="box">
                 <div id="title">
-                    <h1>Pontuação das Equipes</h1>
-                    <p>Digite aqui o numero da prova e qual colocação que as equipes ficaram</p>
+                    <h1>Alterção da Pontuação das Equipes</h1>
+                    <p>Digite aqui o numero da prova e qual colocação que as equipes ficaram, a pontuação incluida para cada um sera alterada.</p>
                     <br>
                     
                 </div>
 
-                <form action="src/cad_pontuacao.php" method="post">
+                <form action="update-pontuacao.php" method="post">
                     <div class="numero-prova">
                         <?php
                         include 'src/extra/connection.php';

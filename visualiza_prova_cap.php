@@ -62,7 +62,7 @@ include("src/extra/protect-cap.php");
     <main>
             <div id="tabela">
 
-                <table class="table">
+                <table class="table table-striped table-bordered">
                 <thead>
                         <tr>
                             <th scope="col">N° da prova</th>

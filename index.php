@@ -42,11 +42,10 @@ if(isset($_POST['usuario']) || isset($_POST['senha']))
             } else if (($_SESSION["nivel"] == "adm") && ($_SESSION['status'] == 'ativo'))
             {
                 header("location: home_adm.php");
-
-            } else { echo'Falha ao logar! usuario ou senha incorretos, ou usuário não esta ativo'; }
-           
-        }
-
+   
+            }
+//        } else { echo'Falha ao logar! usuario ou senha incorretos, ou usuário não esta ativo'; }
+        }            
     }
     
 }

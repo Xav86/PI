@@ -78,8 +78,14 @@ include("src/extra/protect-adm.php");
                         </ul>
                     </li>
                     <!-- Controle de pontuação -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="pontuacao.php">Pontuação</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pontuação</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pontuacao.php">Cadastrar Pontuação</a></li>
+                            <li><a class="dropdown-item" href="edit-pontuacao.php">Alterar Pontuação</a></li>
+
+                        </ul>
                     </li>
 
                     <!-- Deslogar -->
@@ -112,11 +118,49 @@ include("src/extra/protect-adm.php");
         if ($res){
         ?>
             <h1>Bem-vindo, <?php if (isset($linha['nome'])) {echo $linha['nome'];} else {echo "erro ao exibir seu nome";} ?>.</h1>
-            <p><h1>Você está no menu de adiministrador.</h1></p> 
-            <p><i>Não há nada aqui, <b>por enquanto...</b></i></p>  
-            <p><a href="placar.php">ir pra la</a></p>   
+            <h1>Você está no menu de adiministrador.</h1>
         </div>
         <?php } ?>
+
+        <div id="tabela">
+
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Pontuação</th>
+
+                    </tr>
+                </thead>
+                <?php
+
+                    $sql = 'SELECT e.id, e.nome, SUM(ep.pontuacao) AS soma
+                            FROM equipes e
+                            LEFT JOIN equipes_provas ep ON e.id = ep.equipes_id
+                            GROUP BY e.id, e.nome
+                            ORDER BY soma DESC';
+
+                    $res = mysqli_query($id, $sql);
+                    $posicao = 0;
+
+                    while ($linha = mysqli_fetch_array($res)) { 
+                        $posicao++;
+                        ?>
+                        <tr>
+                            <td><?php echo $posicao ?></td>
+
+                            <td><?php echo $linha['nome']; ?></td>
+
+                            <td><?php echo $linha['soma'] ?? 0; ?></td>
+
+                        </tr>
+
+                <?php } ?>
+
+            </table>
+
+        </div>
     </main>
 
 </body>

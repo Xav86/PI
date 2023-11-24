@@ -63,7 +63,7 @@ include("src/extra/protect-cap.php");
         
             <div id="tabela">
 
-                <table class="table">
+                <table class="table table-striped table-hover table-bordered">
                     <thead>
                         <tr>
                             <th scope="col">#</th>

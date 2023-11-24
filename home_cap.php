@@ -76,10 +76,52 @@ include("src/extra/protect-cap.php");
         if ($res){
         ?>
             <h1>você esta no menu de capitão da equipe <?php if (isset($linha['nome'])) {echo $linha['nome'];} else {echo "erro ao exibir nome da equipe X(";} ?></h1>
-            <p><i>Não há nada aqui, <b>por enquanto...</b></i></p>     
+
         </div>
+        
         <?php } ?>
-    </main>
+
+    <div id="tabela">
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Pontuação</th>
+
+                </tr>
+            </thead>
+            <?php
+
+                $sql = 'SELECT e.id, e.nome, SUM(ep.pontuacao) AS soma
+                        FROM equipes e
+                        LEFT JOIN equipes_provas ep ON e.id = ep.equipes_id
+                        GROUP BY e.id, e.nome
+                        ORDER BY soma DESC';
+
+                $res = mysqli_query($id, $sql);
+                $posicao = 0;
+
+                while ($linha = mysqli_fetch_array($res)) { 
+                    $posicao++;
+                    ?>
+                    <tr>
+                        <td><?php echo $posicao ?></td>
+
+                        <td><?php echo $linha['nome']; ?></td>
+
+                        <td><?php echo $linha['soma'] ?? 0; ?></td>
+
+                    </tr>
+
+            <?php } ?>
+
+        </table>
+
+    </div>
+
+</main>
 
 </body>
 </html>

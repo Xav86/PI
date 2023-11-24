@@ -93,7 +93,7 @@
     <main>
         <div id="tabela">
 
-            <table class="table">
+            <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -103,33 +103,33 @@
                     </tr>
                 </thead>
                 <?php
-                include("src/extra/connection.php");
+                    include("src/extra/connection.php");
 
-                $sql = 'SELECT * FROM equipes';
+                    $sql = 'SELECT e.id, e.nome, SUM(ep.pontuacao) AS soma
+                            FROM equipes e
+                            LEFT JOIN equipes_provas ep ON e.id = ep.equipes_id
+                            GROUP BY e.id, e.nome
+                            ORDER BY soma DESC';
 
-                $res = mysqli_query($id, $sql);
-                $posicao = 0;
+                    $res = mysqli_query($id, $sql);
+                    $posicao = 0;
 
-                while ($linha = mysqli_fetch_array($res)) { 
+                    while ($linha = mysqli_fetch_array($res)) { 
                         $posicao++;
-                    ?>
-                    <tr>
-                        <td><?php echo $posicao ?></td>
-
-                        <td><?php echo $linha['nome']; ?></td>
-                        <?php
-                            $cod = $linha['id'];
-                            $sql2 = "SELECT SUM(pontuacao) AS soma FROM equipes_provas WHERE equipes_id='$cod'";
-                            $res2 = mysqli_query($id, $sql2);
-                            $linha2 = mysqli_fetch_array($res2);
-                            $soma = $linha2['soma'];
                         ?>
+                        <tr>
+                            <td><?php echo $posicao ?></td>
 
-                        <td><?php if ($soma == 0){echo "0";}else{echo $soma;} ?></td>
-                    </tr>
+                            <td><?php echo $linha['nome']; ?></td>
 
-                <?php }  ?>
-                
+                            <td><?php echo $linha['soma'] ?? 0; ?></td>
+
+                            
+
+                        </tr>
+
+                <?php } ?>
+
             </table>
 
         </div>
