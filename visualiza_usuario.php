@@ -103,7 +103,7 @@ include("src/extra/protect-adm.php");
     <main>
             <div id="tabela">
                 <div class="pesq">
-                    <form class="d-flex" method="post">
+                    <form class="d-flex" action="" method="post">
                         <div class="pesquise">
                             <label for="pesquisa">Pesquise pelo Nome ou Usuário</label>
                         </div>

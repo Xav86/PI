@@ -64,6 +64,18 @@ include("src/extra/protect-cap.php");
             <div id="tabela">
 
                 <table class="table table-striped table-hover table-bordered">
+                <div class="pesq">
+                    <form class="d-flex" action="" method="post">
+                        <div class="pesquise">
+                            <label for="pesquisa">Pesquise pelo Nome</label>
+                        </div>
+                        <input class="form-control me-2" type="search" id="pesquisa" placeholder="Digite aqui para pesquisar" aria-label="Search" name="pesquisa">
+                        <button class="btn btn-success" type="submit">Pesquisar</button>
+                        
+                    </form>
+
+                </div>
+
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -89,7 +101,17 @@ include("src/extra/protect-cap.php");
                         $cod = $linha['id'];
 
                         //pegando o nome dos inscritos que tem o chave estrangeira = id da equipe do usuarios logado
-                        $sql = ("SELECT * FROM inscritos where equipes_id='$cod'");
+                        $termoPesquisa = '';
+
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        $termoPesquisa = $_POST['pesquisa'];
+                    
+                    
+                        $sql = "SELECT * FROM inscritos WHERE equipes_id='$cod' AND nome LIKE '%$termoPesquisa%'";
+                    } else {
+                        $sql = "SELECT * FROM inscritos where equipes_id='$cod'";
+
+                    }
 
                         $res = mysqli_query($id, $sql);
                         

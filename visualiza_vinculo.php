@@ -103,6 +103,17 @@ include("src/extra/protect-adm.php");
     <main>
         
             <div id="tabela">
+            <div class="pesq">
+                    <form class="d-flex" action="" method="post">
+                        <div class="pesquise">
+                            <label for="pesquisa">Pesquise pelo Nome</label>
+                        </div>
+                        <input class="form-control me-2" type="search" id="pesquisa" placeholder="Digite aqui para pesquisar" aria-label="Search" name="pesquisa">
+                        <button class="btn btn-success" type="submit">Pesquisar</button>
+                        
+                    </form>
+
+                </div>
 
                 <table class="table table-striped table-hover table-bordered">
                     <thead>
@@ -117,7 +128,17 @@ include("src/extra/protect-adm.php");
                     <?php
                         include("src/extra/connection.php");
 
-                        $sql = ('SELECT * FROM equipes');
+                        $termoPesquisa = '';
+
+                        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                            $termoPesquisa = $_POST['pesquisa'];
+                        
+                        
+                            $sql = "SELECT * FROM equipes WHERE nome LIKE '%$termoPesquisa%'";
+                        } else {
+                            $sql = 'SELECT * FROM equipes';
+    
+                        }
 
                         $res = mysqli_query($id, $sql);
                         $posicao = 0;

@@ -63,6 +63,18 @@ include("src/extra/protect-cap.php");
             <div id="tabela">
 
                 <table class="table table-striped table-bordered">
+                <div class="pesq">
+                    <form class="d-flex" action="" method="post">
+                        <div class="pesquise">
+                            <label for="pesquisa">Pesquise pelo Numero da Prova, Nome ou Descrição</label>
+                        </div>
+                        <input class="form-control me-2" type="search" id="pesquisa" placeholder="Digite aqui para pesquisar" aria-label="Search" name="pesquisa">
+                        <button class="btn btn-success" type="submit">Pesquisar</button>
+                        
+                    </form>
+
+                </div>
+
                 <thead>
                         <tr>
                             <th class="tamanho" scope="col">N° da prova</th>
@@ -80,7 +92,20 @@ include("src/extra/protect-cap.php");
                     <?php
                     include("src/extra/connection.php");
 
-                    $sql = 'SELECT p.*, t.* FROM provas p JOIN pontuacao t ON p.id = t.id ORDER BY p.numero_prova asc';
+                    $termoPesquisa = '';
+                   
+                   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                       $termoPesquisa = mysqli_real_escape_string($id, $_POST['pesquisa']);
+                       
+                       $sql = "SELECT p.*, t.* FROM provas p
+                       JOIN pontuacao t ON p.id = t.id
+                       WHERE p.nome LIKE '%$termoPesquisa%' OR p.numero_prova LIKE '%$termoPesquisa%' OR p.descricao LIKE '%$termoPesquisa%'
+                       ORDER BY p.numero_prova ASC";
+
+                   } else {
+                       $sql = 'SELECT p.*, t.* FROM provas p JOIN pontuacao t ON p.id = t.id ORDER BY p.numero_prova ASC';
+                       
+                   }
 
                     $res = mysqli_query($id, $sql);
 

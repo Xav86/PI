@@ -11,6 +11,25 @@
     background-color: #ffd131 !important;
 }
 
+.pesq
+{
+    margin: 0px 10px 20px;
+    font-weight: 500;
+    display: flex;
+}
+
+.pesquise
+{
+    display: flex;
+    align-items: center;
+}
+
+.pesq input
+{
+    margin: 0 20px;
+    max-width: 700px;
+}
+
 .dropdown-toggle, .nav-link
 {
     font-weight: 700;
