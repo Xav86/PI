@@ -33,6 +33,12 @@
     text-align: center;
 }
 
+.dropdown-toggle, .nav-link
+{
+    font-weight: 700;
+    color: black;
+}
+
 .numero-prova
 {
     display: flex;

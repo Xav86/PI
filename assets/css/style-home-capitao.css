@@ -11,6 +11,12 @@
     background-color: #ffd131 !important;
 }
 
+.dropdown-toggle, .nav-link
+{
+    font-weight: 700;
+    color: black;
+}
+
 #container
 {
     width: 100%;

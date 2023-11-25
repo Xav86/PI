@@ -102,7 +102,18 @@ include("src/extra/protect-adm.php");
  
     <main>
             <div id="tabela">
+                <div class="pesq">
+                    <form class="d-flex" method="post">
+                        <div class="pesquise">
+                            <label for="pesquisa">Pesquise pelo Nome ou Usuário</label>
+                        </div>
+                        <input class="form-control me-2" type="search" id="pesquisa" placeholder="Digite aqui para pesquisar" aria-label="Search" name="pesquisa">
+                        <button class="btn btn-success" type="submit">Pesquisar</button>
+                        
+                    </form>
 
+                </div>
+                
                 <table class="table table-striped table-hover table-bordered">
                     <thead>
                         <tr>
@@ -118,7 +129,17 @@ include("src/extra/protect-adm.php");
                     <?php
                     include("src/extra/connection.php");
 
-                    $sql = 'SELECT * FROM usuarios';
+                    $termoPesquisa = '';
+
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        $termoPesquisa = $_POST['pesquisa'];
+                    
+                    
+                        $sql = "SELECT * FROM usuarios WHERE nome LIKE '%$termoPesquisa%' OR usuario LIKE '%$termoPesquisa%' OR nivel LIKE '%$termoPesquisa%'";
+                    } else {
+                        $sql = 'SELECT * FROM usuarios';
+
+                    }
 
                     $res = mysqli_query($id, $sql);
                     $posicao = 0;
@@ -127,6 +148,7 @@ include("src/extra/protect-adm.php");
                         if ($linha['status'] == 'ativo') {
                             $posicao++;
                         ?>
+                        
                         <tr>
                             <td><?php echo $posicao ?></td>
 
