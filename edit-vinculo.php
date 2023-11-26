@@ -106,7 +106,7 @@ include("src/extra/protect-adm.php");
             <div id="box">
                 <!-- Cabeçalho -->
                 <div id="title">
-                    <h1>Cadastro de Capitães</h1>
+                    <h1>Vinculo de Capitães</h1>
                     <p>Selecione um capitão e vinclue-o a ume equipe</p>
                     
                 </div>
