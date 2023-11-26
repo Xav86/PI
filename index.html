@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="../assets/image/fivicon.png" type="image/x-icon">
+    <title>Cadastro bem-sucedido</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        #loading-bar {
+            width: 100%;
+            height: 4px;
+            background-color: #ffd131;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: loading-animation 3s ease-in-out;
+        }
+
+        @keyframes loading-animation {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .content {
+            text-align: center;
+            opacity: 0;
+            animation: content-fade-in 2s forwards;
+        }
+
+        @keyframes content-fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-bar"></div>
+
+    <div class="content">
+        <img src="assets/image/saga-cedup-logo.png" alt="Saga Cedup">
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "login.php"; 
+        }, 4000); 
+    </script>
+</body>
+</html>
