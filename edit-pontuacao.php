@@ -201,7 +201,7 @@ include("src/extra/protect-adm.php");
                     </div>
 
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary btn-lg" type="submit">Executar</button>
+                        <button class="btn btn-primary btn-lg" type="submit">Salvar alterações</button>
                     </div>
                     
                 </form>

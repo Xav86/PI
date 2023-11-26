@@ -37,7 +37,7 @@ if(isset($_POST['usuario']) || isset($_POST['senha']))
             //mandando pra outra pragina
             if(($_SESSION['nivel'] == 'cap') && (($_SESSION['status']) == 'ativo'))
             {
-                    header("location: home_cap.php");
+                header("location: home_cap.php");
                     
             } else if (($_SESSION["nivel"] == "adm") && ($_SESSION['status'] == 'ativo'))
             {

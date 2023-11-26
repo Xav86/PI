@@ -34,6 +34,7 @@ if (($res) && ($res2)) { ?>
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="shortcut icon" href="assets/image/fivicon.png" type="image/x-icon">
     <title>Atualização bem-sucedida</title>
     <style>
         body {

@@ -22,6 +22,7 @@ if (($res) && ($res2)) { ?>
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="shortcut icon" href="../assets/image/fivicon.png" type="image/x-icon">
     <title>Vinculo bem-sucedido</title>
     <style>
         body {

@@ -49,6 +49,7 @@ if (($res1) && ($res2) && ($res3) && ($res4) && ($res5)) { ?>
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="shortcut icon" href="assets/image/fivicon.png" type="image/x-icon">
     <title>Atualização bem-sucedido</title>
     <style>
         body {
